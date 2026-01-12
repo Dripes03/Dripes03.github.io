@@ -9,7 +9,7 @@ html, body {
 
 body {
     min-height: 100vh;
-    min-width: 400px;
+    min-width: 6cm;
     display: flex;
     flex-direction: column;
     margin: 0;
