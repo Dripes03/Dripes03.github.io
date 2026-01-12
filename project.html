@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1 id="project-title">Project</h1>
+    <a class="back-link" href="index.html">← Back to Home</a>
+</header>
+
+<section class="project-details">
+    <img id="project-image" src="" alt="Project Image">
+
+    <div class="project-text">
+        <h2>Description</h2>
+        <p id="project-description"></p>
+
+        <h2>Tools & Tech</h2>
+        <p id="project-tech"></p>
+    </div>
+</section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const project = params.get("project");
+
+const data = {
+    shader: {
+        title: "Stylized Shader System",
+        image: "images/project1.jpg",
+        description: "A modular stylized shader framework supporting rim lighting, outlines, and texture blending.",
+        tech: "Unreal Engine, HLSL, Material Editor"
+    },
+    tool: {
+        title: "Level Art Tool",
+        image: "images/project2.jpg",
+        description: "An editor utility that automates prop scattering, snapping, and batching.",
+        tech: "Python, Unreal Editor Utility Widgets"
+    },
+    fx: {
+        title: "Realtime VFX Pack",
+        image: "images/project3.jpg",
+        description: "GPU particle simulations optimized for console performance.",
+        tech: "Niagara, Compute Shaders"
+    }
+};
+
+const projectData = data[project];
+
+if (projectData) {
+    document.getElementById("project-title").innerText = projectData.title;
+    document.getElementById("project-image").src = projectData.image;
+    document.getElementById("project-description").innerText = projectData.description;
+    document.getElementById("project-tech").innerText = projectData.tech;
+}
+</script>
+
+</body>
+</html>
