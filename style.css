@@ -17,6 +17,37 @@ body {
     color: #e6e6e6;
 }
 
+#construction-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 15, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.overlay-card {
+    background: rgba(20, 25, 35, 0.9);
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    max-width: 90%;
+}
+
+.overlay-card h1 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.overlay-card p {
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
 .page-content {
     flex: 1;
 }
