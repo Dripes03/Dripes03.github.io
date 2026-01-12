@@ -12,7 +12,7 @@ body {
 .header {
     text-align: center;
     padding: 3rem 1rem;
-    background: linear-gradient(135deg, #ffffff, #111827);
+    background-image: linear-gradient(to bottom, #222d46, #1e2639, #1a1f2d, #161821, #101115);
 }
 
 .header h1 {
