@@ -9,7 +9,7 @@ html, body {
 
 body {
     min-height: 100vh;
-    min-width: 6cm;
+    /* min-width: 6cm; */
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -89,10 +89,20 @@ body {
     font-size: 2.5rem;
 }
 
-.about, .projects {
+.about {
     max-width: 1100px;
     margin: auto;
     padding: 3rem 1rem;
+}
+
+ .projects {
+    max-width: 1500px;
+    margin: auto;
+    padding: 3rem 1rem;
+}
+
+.about p{
+    font-size: medium;
 }
 
 h2 {
@@ -115,7 +125,7 @@ h2 {
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-10px) rotateZ(1deg);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
@@ -135,7 +145,7 @@ h2 {
 }
 
 .project-details {
-    max-width: 1000px;
+    /* max-width: 1500px; */
     margin: auto;
     padding: 3rem 1rem;
     display: grid;
@@ -155,7 +165,7 @@ h2 {
 .back-link {
     display: inline-block;
     margin-top: 1rem;
-    color: #8ab4ff;
+    color: #90a4c7;
     text-decoration: none;
 }
 

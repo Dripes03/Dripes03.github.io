@@ -30,23 +30,23 @@ const params = new URLSearchParams(window.location.search);
 const project = params.get("project");
 
 const data = {
-    shader: {
-        title: "Stylized Shader System",
-        image: "images/project1.jpg",
-        description: "A modular stylized shader framework supporting rim lighting, outlines, and texture blending.",
-        tech: "Unreal Engine, HLSL, Material Editor"
+    rust: {
+        title: "Procedural Rust Shader",
+        image: "images/project1.png",
+        description: "A procedural shader which adds rust to models using the sign distance field (SDF) of a water plane.",
+        tech: "Unreal Engine, Substance Designer, Material Editor"
     },
-    tool: {
-        title: "Level Art Tool",
+    environment: {
+        title: "Environmental VFX",
         image: "images/project2.jpg",
-        description: "An editor utility that automates prop scattering, snapping, and batching.",
-        tech: "Python, Unreal Editor Utility Widgets"
+        description: "Environmental VFX of a scene in Unreal Engine using Niagra particle systems. This project was done in collaboration with the talented graphical artist Suzanna Kwidzinska.",
+        tech: "Unreal Engine, Substance Designer, Houdini"
     },
-    fx: {
-        title: "Realtime VFX Pack",
+    snow: {
+        title: "Dynamic Snow Shader and Environmental VFX",
         image: "images/project3.png",
-        description: "GPU particle simulations optimized for console performance.",
-        tech: "Niagara, Compute Shaders"
+        description: "A dynamic snow shader which allows the developer to increase the amount of snow in the scene. The characters and models are able to make impressions in the snow. I have also developed on the environmental VFX of this scene, having player immersion as a high priority.",
+        tech: "Unreal Engine, Substance Designer"
     }
 };
 
