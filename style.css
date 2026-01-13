@@ -16,7 +16,7 @@ body {
     background: #0f1115;
     color: #e6e6e6;
 }
-
+/*
 #construction-overlay {
     position: fixed;
     inset: 0;
@@ -70,7 +70,7 @@ body {
     position: relative;
     z-index: 1;
 }
-
+*/
 .page-content {
     flex: 1;
 }
