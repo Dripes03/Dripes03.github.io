@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedural Rust Shader | Erik Svensson</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body>
+
+<header class="header">
+    <h1>Procedural Rust Shader</h1>
+    <a class="back-link" href="../index.html">← Back to Home</a>
+</header>
+
+<!-- HERO -->
+<section class="project-hero">
+    <img src="../images/Preview Lit.png" alt="Rust Shader Preview">
+</section>
+
+<!-- DESCRIPTION -->
+<section class="project-details">
+    <img class="previewable" src="../images/PreviewLitUnlit.png" alt="Rust Shader Lit and Unlit Preview">
+    <div class="project-text">
+        <h2>Description</h2>
+        <p>
+            A procedural shader that adds rust using the signed distance field
+            of a water plane, allowing corrosion to appear only where water
+            would realistically accumulate.
+        </p>
+
+        <h2>Programs Used</h2>
+        <p>Unreal Engine, Substance Designer, Material Editor</p>
+    </div>
+</section>
+
+<!-- TECH BREAKDOWN -->
+<section class="breakdown">
+    <h2>Technical Breakdown</h2>
+    <img class="previewable" src="../images/Preview Masks.png" alt="Rust Shader Lit and Unlit Preview"></img>
+    <p>
+        The shader samples distance from a water surface SDF and blends rust
+        masks based on curvature and AO to avoid uniform buildup.
+    </p>
+</section>
+
+
+<footer class="footer">
+    <p>© 2026 Erik Svensson</p>
+</footer>
+
+
+<!-- Lightbox Stuff-->
+<div id="image-lightbox" class="lightbox hidden">
+    <button class="lightbox-close" aria-label="Close preview">×</button>
+    <img id="lightbox-img" src="" alt="Preview">
+</div>
+
+<script src="../script.js"></script>
+<!------------------->
+</body>
+</html>
