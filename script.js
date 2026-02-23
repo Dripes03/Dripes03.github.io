@@ -1,33 +1,27 @@
-// ---------- IMAGE LIGHTBOX ----------
+// Smooth scroll animation on elements
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
 
-const lightbox = document.getElementById("image-lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = document.querySelector(".lightbox-close");
-
-function closeLightbox() {
-    lightbox.classList.add("hidden");
-    lightboxImg.src = "";
-    document.body.classList.remove("no-scroll");
-}
-
-// Only run if lightbox exists on page
-if (lightbox) {
-
-    document.querySelectorAll("img.previewable").forEach(img => {
-        img.addEventListener("click", () => {
-            lightboxImg.src = img.dataset.full || img.src;
-            lightbox.classList.remove("hidden");
-            document.body.classList.add("no-scroll");
-        });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
     });
+}, observerOptions);
 
-    closeBtn.addEventListener("click", closeLightbox);
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
 
-    lightbox.addEventListener("click", e => {
-        if (e.target === lightbox) closeLightbox();
-    });
-
-    document.addEventListener("keydown", e => {
-        if (e.key === "Escape") closeLightbox();
-    });
-}
+// Dynamic nav background on scroll
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 100) {
+        nav.style.background = 'rgba(10, 10, 10, 0.95)';
+    } else {
+        nav.style.background = 'rgba(10, 10, 10, 0.8)';
+    }
+});

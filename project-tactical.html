@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactical Environment - Project Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">TECHNICAL ARTIST</div>
+        <ul class="nav-links">
+            <li><a href="index.html#specialization">Specialization</a></li>
+            <li><a href="index.html#work">Other Work</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Project Detail Content -->
+    <section style="padding-top: 120px;">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-detail-hero fade-in">
+            <img src="Preview_Lit.png" alt="Tactical Environment">
+        </div>
+
+        <div class="project-detail-header fade-in">
+            <h1>Tactical Environment</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Technical Artist / Environment Artist</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Tools</span>
+                    <span class="meta-value">Unreal Engine, Blender, Substance Painter</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">4 weeks</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">Environment Art</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-content fade-in">
+            <h2>Project Overview</h2>
+            <p>This military environment showcases realistic PBR materials, dynamic lighting, and water simulation techniques. The scene depicts an abandoned coastal military outpost with rusted vehicles and equipment partially submerged in shallow water.</p>
+
+            <h3>Technical Approach</h3>
+            <p>The environment was built with a strong emphasis on modular design and realistic material definition:</p>
+            <ul>
+                <li>Custom PBR materials with detailed rust, wear, and dirt accumulation</li>
+                <li>Dynamic water shader with realistic refraction and caustics</li>
+                <li>Volumetric fog for atmospheric depth and mood</li>
+                <li>Optimized collision meshes for potential gameplay scenarios</li>
+                <li>Terrain blending system for seamless transitions between materials</li>
+            </ul>
+
+            <h3>Lighting & Atmosphere</h3>
+            <p>The lighting setup utilizes a combination of directional light for sun simulation, skylight for ambient lighting, and strategically placed point lights to highlight key features. Post-process effects including color grading and depth of field were carefully tuned to achieve a cinematic look while maintaining visual clarity.</p>
+
+            <h3>Optimization Strategy</h3>
+            <p>To ensure the scene runs efficiently:</p>
+            <ul>
+                <li>Implemented aggressive LOD systems on all hero assets</li>
+                <li>Used texture atlasing for small props to reduce draw calls</li>
+                <li>Culling volumes strategically placed to reduce rendering overhead</li>
+                <li>Lightmap resolution carefully balanced for quality vs. memory</li>
+            </ul>
+
+            <h2>Key Learnings</h2>
+            <p>This project taught me valuable lessons about environmental storytelling through weathering and decay. The challenge of making military hardware look convincingly abandoned while maintaining visual interest pushed my skills in both artistic direction and technical execution.</p>
+
+            <!-- Add more images here if available -->
+            <!-- <div class="image-gallery">
+                <div class="gallery-image">
+                    <img src="tactical-detail-1.jpg" alt="Detail view">
+                </div>
+                <div class="gallery-image">
+                    <img src="tactical-detail-2.jpg" alt="Material breakdown">
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://artstation.com" target="_blank">ArtStation</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+        <p>&copy; 2026 Technical Artist Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
