@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Scene - Project Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">TECHNICAL ARTIST</div>
+        <ul class="nav-links">
+            <li><a href="index.html#specialization">Specialization</a></li>
+            <li><a href="index.html#work">Other Work</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Project Detail Content -->
+    <section style="padding-top: 120px;">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-detail-hero fade-in">
+            <img src="project2.jpg" alt="Architectural Scene">
+        </div>
+
+        <div class="project-detail-header fade-in">
+            <h1>Architectural Scene</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Lighting Artist / Technical Artist</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Tools</span>
+                    <span class="meta-value">Unreal Engine, Photoshop</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">2 weeks</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">Lighting & VFX</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-content fade-in">
+            <h2>Project Overview</h2>
+            <p>An atmospheric lighting study featuring a classical European palace reflected in still water during golden hour. This project explores advanced lighting techniques, volumetric effects, and realistic water reflections to create a moody, cinematic scene.</p>
+
+            <h3>Lighting Design</h3>
+            <p>The lighting setup was designed to capture the magical quality of twilight:</p>
+            <ul>
+                <li>HDRI skybox carefully chosen and color-graded for authentic sunset atmosphere</li>
+                <li>Volumetric fog with custom density and scattering parameters</li>
+                <li>Interior lights with realistic falloff and warm color temperature</li>
+                <li>Rim lighting from the sky to separate the building from the background</li>
+                <li>Reflection captures strategically placed for accurate water reflections</li>
+            </ul>
+
+            <h3>Water Simulation</h3>
+            <p>The water surface required special attention to achieve realistic stillness while maintaining visual interest:</p>
+            <ul>
+                <li>Custom water shader with planar reflections</li>
+                <li>Subtle normal map animation for micro surface detail</li>
+                <li>Color absorption based on depth for realistic water clarity</li>
+                <li>Screen-space reflections combined with planar reflections for optimal quality</li>
+            </ul>
+
+            <h3>Post-Processing & Color Grading</h3>
+            <p>Extensive post-processing was applied to achieve the final cinematic look:</p>
+            <ul>
+                <li>Custom LUT for color grading with emphasis on warm highlights and cool shadows</li>
+                <li>Bloom and lens flares for light sources</li>
+                <li>Vignette and film grain for atmospheric depth</li>
+                <li>Chromatic aberration subtly applied for lens realism</li>
+            </ul>
+
+            <h2>Challenges & Solutions</h2>
+            <p>The main challenge was achieving perfect symmetry in the water reflections while maintaining performance. By using a combination of planar reflections for the main building and SSR for distant elements, I achieved the desired look without compromising frame rate.</p>
+
+            <h2>Key Learnings</h2>
+            <p>This project deepened my understanding of natural lighting phenomena and how to replicate them in real-time rendering. The importance of reference photography and understanding how light behaves in different atmospheric conditions proved invaluable.</p>
+
+            <!-- Add more images here if available -->
+            <!-- <div class="image-gallery">
+                <div class="gallery-image">
+                    <img src="architectural-detail-1.jpg" alt="Day lighting comparison">
+                </div>
+                <div class="gallery-image">
+                    <img src="architectural-detail-2.jpg" alt="Lighting breakdown">
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://artstation.com" target="_blank">ArtStation</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+        <p>&copy; 2026 Technical Artist Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

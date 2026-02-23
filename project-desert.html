@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Rock Formation - Project Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">TECHNICAL ARTIST</div>
+        <ul class="nav-links">
+            <li><a href="index.html#specialization">Specialization</a></li>
+            <li><a href="index.html#work">Other Work</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Project Detail Content -->
+    <section style="padding-top: 120px;">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-detail-hero fade-in">
+            <img src="project3.png" alt="Desert Rock Formation">
+        </div>
+
+        <div class="project-detail-header fade-in">
+            <h1>Desert Rock Formation</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Technical Artist</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Tools</span>
+                    <span class="meta-value">Unreal Engine, Substance Designer</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">3 weeks</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">Shader Development</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-content fade-in">
+            <h2>Project Overview</h2>
+            <p>This project focused on creating a highly detailed procedural rock shader system for desert environments. The goal was to achieve photorealistic weathering and erosion effects while maintaining real-time performance in Unreal Engine.</p>
+
+            <h3>Technical Approach</h3>
+            <p>The shader utilizes a multi-layered approach combining height-based blending, vertex color masking, and procedural noise functions to create realistic surface variation. Key features include:</p>
+            <ul>
+                <li>Procedural erosion patterns using Perlin and Voronoi noise</li>
+                <li>Dynamic weathering based on surface orientation and exposure</li>
+                <li>PBR material blending with custom roughness variation</li>
+                <li>Distance-based tessellation for optimized performance</li>
+            </ul>
+
+            <h3>Challenges & Solutions</h3>
+            <p>One of the main challenges was balancing visual fidelity with performance. The initial implementation caused significant performance drops on lower-end hardware. To address this, I implemented a LOD system with distance-based material complexity reduction and optimized the tessellation parameters.</p>
+
+            <h3>Results</h3>
+            <p>The final shader system achieved the target visual quality while maintaining 60+ FPS on mid-range hardware. The procedural nature allows for easy variation across multiple assets without requiring unique texture sets for each rock formation.</p>
+
+            <h2>Key Learnings</h2>
+            <p>This project reinforced the importance of early performance profiling and the value of modular shader design. The procedural approach not only saved memory but also provided unprecedented flexibility for the art team to iterate quickly.</p>
+
+            <!-- Add more images here if available -->
+            <!-- <div class="image-gallery">
+                <div class="gallery-image">
+                    <img src="desert-detail-1.jpg" alt="Detail view">
+                </div>
+                <div class="gallery-image">
+                    <img src="desert-detail-2.jpg" alt="Shader breakdown">
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://artstation.com" target="_blank">ArtStation</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+        <p>&copy; 2026 Technical Artist Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
