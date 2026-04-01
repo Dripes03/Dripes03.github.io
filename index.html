@@ -4,648 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erik Svensson — Technical Artist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        :root {
-            --bg: #111114;
-            --surface: #1a1a1f;
-            --border: rgba(255,255,255,0.06);
-            --text: #ebebeb;
-            --muted: #6a6a7a;
-            --accent: #e8ff00;
-            --sidebar-w: 280px;
-        }
-
-        html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
-
-        /* ─────────────────────────────────────────
-           FIXED LEFT SIDEBAR
-        ───────────────────────────────────────── */
-        .sidebar {
-            position: fixed;
-            top: 0; left: 0; bottom: 0;
-            width: var(--sidebar-w);
-            border-right: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            padding: 2.5rem 2rem;
-            z-index: 50;
-            background: var(--bg);
-            overflow-y: auto;
-        }
-
-        .sidebar-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.2rem;
-            line-height: 0.9;
-            letter-spacing: 0.05em;
-            color: var(--text);
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar-role {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.65rem;
-            color: var(--accent);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 2.5rem;
-        }
-
-        .sidebar-desc {
-            font-size: 0.82rem;
-            color: var(--muted);
-            line-height: 1.7;
-            margin-bottom: 2.5rem;
-            padding-bottom: 2.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .sidebar-nav {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            margin-bottom: auto;
-        }
-
-        .sidebar-nav li a {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.85rem 0;
-            border-bottom: 1px solid var(--border);
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            transition: color 0.2s, padding-left 0.2s;
-        }
-        .sidebar-nav li a:hover { color: var(--text); padding-left: 0.5rem; }
-
-        .sidebar-nav-num {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.6rem;
-            color: var(--border);
-            letter-spacing: 0;
-        }
-
-        .sidebar-bottom {
-            margin-top: 2.5rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .sidebar-social-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.6rem;
-            color: var(--muted);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 0.85rem;
-        }
-
-        .sidebar-socials { display: flex; flex-direction: column; gap: 0.1rem; }
-        .sidebar-socials a {
-            font-size: 0.82rem;
-            color: var(--muted);
-            text-decoration: none;
-            padding: 0.35rem 0;
-            transition: color 0.2s;
-            display: flex;
-            justify-content: space-between;
-        }
-        .sidebar-socials a:hover { color: var(--accent); }
-        .sidebar-socials a span { font-size: 0.7rem; opacity: 0.4; }
-
-        .sidebar-cta {
-            display: block;
-            text-align: center;
-            background: var(--accent);
-            color: #111114;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            padding: 0.75em 1em;
-            text-decoration: none;
-            border-radius: 2px;
-            margin-top: 1.5rem;
-            transition: opacity 0.2s;
-        }
-        .sidebar-cta:hover { opacity: 0.85; }
-
-        /* ─────────────────────────────────────────
-           MAIN SCROLL AREA
-        ───────────────────────────────────────── */
-        .main {
-            margin-left: var(--sidebar-w);
-            min-height: 100vh;
-        }
-
-        /* ── MARQUEE — full bleed at the top of content ── */
-        .marquee-wrap {
-            overflow: hidden;
-            background: var(--accent);
-            padding: 0.8rem 0;
-        }
-        .marquee-track {
-            display: flex;
-            animation: marquee 18s linear infinite;
-            white-space: nowrap;
-        }
-        .marquee-item {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.05rem;
-            letter-spacing: 0.15em;
-            color: #111114;
-            padding: 0 2.5rem;
-            display: inline-block;
-        }
-        .marquee-dot { color: rgba(17,17,20,0.3); }
-        @keyframes marquee {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* ── SHARED SECTION CHROME ── */
-        .section-header {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            margin-bottom: 1.5rem;
-        }
-        .section-title-group { display: flex; align-items: baseline; gap: 0.85rem; }
-        .section-num {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            color: var(--muted);
-            letter-spacing: 0.1em;
-        }
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            letter-spacing: 0.05em;
-            color: var(--text);
-        }
-        .section-hint {
-            font-size: 0.75rem;
-            color: var(--muted);
-            letter-spacing: 0.05em;
-        }
-
-        /* ── PORTFOLIO ── */
-        .portfolio-section {
-            padding: 2.5rem 3rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        /* Equal 3-col grid — no single card dominates */
-        .portfolio-layout {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-
-        .portfolio-card {
-            display: block;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-            background: var(--surface);
-            aspect-ratio: 4/3;
-        }
-
-        .portfolio-card img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s, filter 0.3s;
-            filter: brightness(0.7);
-        }
-        .portfolio-card:hover img { transform: scale(1.06); filter: brightness(0.5); }
-
-        .portfolio-card-body {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .portfolio-tag-inline {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.6rem;
-            color: var(--accent);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 0.3rem;
-        }
-
-        .portfolio-card-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.4rem;
-            letter-spacing: 0.04em;
-            color: #fff;
-        }
-
-        .portfolio-arrow {
-            width: 36px; height: 36px;
-            border: 1px solid rgba(255,255,255,0.25);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 0.85rem;
-            flex-shrink: 0;
-            transition: background 0.2s, border-color 0.2s, color 0.2s;
-        }
-        .portfolio-card:hover .portfolio-arrow {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: #111114;
-        }
-
-        .portfolio-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 2px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.35s;
-        }
-        .portfolio-card:hover::after { transform: scaleX(1); }
-
-        /* ── PREVIOUS WORK ── */
-        .prev-section {
-            padding: 2.5rem 3rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .prev-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1px;
-            background: var(--border);
-        }
-
-        .prev-card {
-            position: relative;
-            aspect-ratio: 4/3;
-            overflow: hidden;
-            display: block;
-            text-decoration: none;
-            background: var(--bg);
-        }
-
-        .prev-card img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            opacity: 0.4;
-            transition: opacity 0.3s, transform 0.5s;
-        }
-        .prev-card:hover img { opacity: 0.65; transform: scale(1.05); }
-
-        .prev-card-overlay {
-            position: absolute;
-            inset: 0;
-            padding: 1.25rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-        .prev-card-num {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3rem;
-            color: rgba(255,255,255,0.05);
-            position: absolute;
-            top: 0.75rem; left: 1.25rem;
-        }
-        .prev-card-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.2rem;
-            color: #fff;
-            letter-spacing: 0.04em;
-        }
-        .prev-card-sub {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.58rem;
-            color: var(--accent);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin-top: 0.2rem;
-        }
-        .prev-card-hover-line {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 2px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s;
-        }
-        .prev-card:hover .prev-card-hover-line { transform: scaleX(1); }
-
-        /* ── ABOUT ── */
-        .about-section {
-            padding: 3rem;
-            border-bottom: 1px solid var(--border);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .about-eyebrow {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.65rem;
-            color: var(--accent);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-        .about-heading {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.8rem;
-            letter-spacing: 0.04em;
-            line-height: 0.95;
-            margin-bottom: 1.25rem;
-        }
-        .about-body {
-            font-size: 0.88rem;
-            color: var(--muted);
-            line-height: 1.8;
-            margin-bottom: 0.9rem;
-        }
-
-        .skill-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.7rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .skill-name { font-size: 0.85rem; color: var(--text); }
-        .skill-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-
-        .contact-row { margin-top: 2rem; }
-        .contact-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.85rem 0;
-            border-bottom: 1px solid var(--border);
-            text-decoration: none;
-            transition: padding-left 0.2s;
-        }
-        .contact-item:hover { padding-left: 0.5rem; }
-        .contact-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.65rem;
-            color: var(--muted);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-        .contact-value { font-size: 0.85rem; color: var(--text); transition: color 0.2s; }
-        .contact-item:hover .contact-value { color: var(--accent); }
-
-        /* ── FOOTER ── */
-        footer {
-            padding: 1.5rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .footer-copy {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.65rem;
-            color: var(--muted);
-        }
-        .footer-links { display: flex; gap: 1.75rem; }
-        .footer-links a {
-            font-size: 0.75rem;
-            color: var(--muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .footer-links a:hover { color: var(--accent); }
-
-        /* ── HAMBURGER BUTTON ── */
-        .hamburger-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.4rem;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .hamburger-btn span {
-            display: block;
-            width: 22px;
-            height: 1.5px;
-            background: var(--text);
-            transition: transform 0.3s, opacity 0.3s;
-        }
-        .hamburger-btn.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-        .hamburger-btn.open span:nth-child(2) { opacity: 0; }
-        .hamburger-btn.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-        /* ── MOBILE TOPBAR (hidden on desktop) ── */
-        .mobile-topbar {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 1.5rem;
-            border-bottom: 1px solid var(--border);
-            background: var(--bg);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .mobile-topbar-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.6rem;
-            letter-spacing: 0.05em;
-            color: var(--text);
-            line-height: 1;
-        }
-        .mobile-topbar-role {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.58rem;
-            color: var(--accent);
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            margin-top: 0.15rem;
-        }
-
-        /* ── DRAWER OVERLAY ── */
-        .drawer-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(7,7,10,0.75);
-            z-index: 150;
-            opacity: 0;
-            transition: opacity 0.3s;
-            pointer-events: none;
-        }
-        .drawer-overlay.open { opacity: 1; pointer-events: auto; }
-
-        /* ── DRAWER PANEL ── */
-        .drawer {
-            position: fixed;
-            top: 0; left: 0; bottom: 0;
-            width: 300px;
-            background: var(--bg);
-            border-right: 1px solid var(--border);
-            z-index: 160;
-            transform: translateX(-100%);
-            transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-            display: flex;
-            flex-direction: column;
-            padding: 2rem 1.75rem;
-            overflow-y: auto;
-        }
-        .drawer.open { transform: translateX(0); }
-
-        .drawer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
-        .drawer-close {
-            background: none;
-            border: 1px solid var(--border);
-            color: var(--muted);
-            width: 32px; height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1rem;
-            line-height: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s, border-color 0.2s;
-            flex-shrink: 0;
-        }
-        .drawer-close:hover { color: var(--text); border-color: var(--text); }
-
-        .drawer-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            line-height: 0.9;
-            letter-spacing: 0.05em;
-            color: var(--text);
-        }
-        .drawer-role {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.62rem;
-            color: var(--accent);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-top: 0.5rem;
-        }
-        .drawer-desc {
-            font-size: 0.82rem;
-            color: var(--muted);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border);
-        }
-        .drawer-nav { list-style: none; margin-bottom: auto; }
-        .drawer-nav li a {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.9rem 0;
-            border-bottom: 1px solid var(--border);
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 0.78rem;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            transition: color 0.2s, padding-left 0.2s;
-        }
-        .drawer-nav li a:hover { color: var(--text); padding-left: 0.4rem; }
-        .drawer-nav-num {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.58rem;
-            color: var(--border);
-        }
-        .drawer-bottom {
-            margin-top: 2rem;
-            padding-top: 1.75rem;
-            border-top: 1px solid var(--border);
-        }
-        .drawer-social-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.58rem;
-            color: var(--muted);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 0.75rem;
-        }
-        .drawer-socials { display: flex; flex-direction: column; }
-        .drawer-socials a {
-            font-size: 0.85rem;
-            color: var(--muted);
-            text-decoration: none;
-            padding: 0.4rem 0;
-            display: flex;
-            justify-content: space-between;
-            transition: color 0.2s;
-        }
-        .drawer-socials a:hover { color: var(--accent); }
-        .drawer-socials a span { font-size: 0.7rem; opacity: 0.4; }
-        .drawer-cta {
-            display: block;
-            text-align: center;
-            background: var(--accent);
-            color: #111114;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            padding: 0.8em 1em;
-            text-decoration: none;
-            border-radius: 2px;
-            margin-top: 1.25rem;
-            transition: opacity 0.2s;
-        }
-        .drawer-cta:hover { opacity: 0.85; }
-
-        /* ── MOBILE ── */
-        @media (max-width: 900px) {
-            .sidebar { display: none; }
-            .mobile-topbar { display: flex; }
-            .hamburger-btn { display: flex; }
-            .drawer-overlay { display: block; }
-
-            .main { margin-left: 0; }
-
-            .portfolio-section, .prev-section, .about-section { padding: 2rem 1.5rem; }
-            .portfolio-layout { grid-template-columns: 1fr; }
-            .prev-grid { grid-template-columns: 1fr 1fr; }
-            .about-section { grid-template-columns: 1fr; gap: 2.5rem; }
-            footer { padding: 1.5rem; flex-direction: column; gap: 0.75rem; }
-        }
-
-        @media (max-width: 540px) {
-            .prev-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -722,7 +82,7 @@
     <main class="main">
 
         <!-- MARQUEE -->
-        <div class="marquee-wrap">
+        <!-- <div class="marquee-wrap">
             <div class="marquee-track">
                 <span class="marquee-item">Shader Development</span><span class="marquee-item marquee-dot">·</span>
                 <span class="marquee-item">Environment Art</span><span class="marquee-item marquee-dot">·</span>
@@ -737,7 +97,7 @@
                 <span class="marquee-item">Pipeline Tools</span><span class="marquee-item marquee-dot">·</span>
                 <span class="marquee-item">Lighting &amp; FX</span><span class="marquee-item marquee-dot">·</span>
             </div>
-        </div>
+        </div> -->
 
         <!-- PORTFOLIO -->
         <section class="portfolio-section" id="portfolio">
@@ -751,22 +111,22 @@
 
             <div class="portfolio-layout">
                 <a href="project-desert.html" class="portfolio-card">
-                    <img src="project3.png" alt="Desert Rock Formation">
+                    <img src="project3.png" alt="Snow VFX and Shaders">
                     <div class="portfolio-card-body">
                         <div>
-                            <p class="portfolio-tag-inline">Shader Development</p>
-                            <h3 class="portfolio-card-name">Desert Rock Formation</h3>
+                            <p class="portfolio-tag-inline">VFX &amp; Shader Development</p>
+                            <h3 class="portfolio-card-name">Snow VFX and Shaders</h3>
                         </div>
                         <div class="portfolio-arrow">→</div>
                     </div>
                 </a>
 
-                <a href="project-tactical.html" class="portfolio-card">
+                <a href="project-rust.html" class="portfolio-card">
                     <img src="Preview_Lit.png" alt="Tactical Environment">
                     <div class="portfolio-card-body">
                         <div>
-                            <p class="portfolio-tag-inline">Environment Art</p>
-                            <h3 class="portfolio-card-name">Tactical Environment</h3>
+                            <p class="portfolio-tag-inline">Procedural Shader</p>
+                            <h3 class="portfolio-card-name">Procedural Rust</h3>
                         </div>
                         <div class="portfolio-arrow">→</div>
                     </div>
@@ -784,12 +144,51 @@
                 </a>
             </div>
         </section>
+        <!-- Game Projects -->
+           <section class="prev-section" id="gameprojects">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <span class="section-num">02</span>
+                    <h2 class="section-title">Game Projects</h2>
+                </div>
+                <span class="section-hint">TGA &amp; BTH Game Projects</span>
+            </div>
 
+            <div class="prev-grid">
+                <a href="#" class="prev-card">
+                    <img src="Lenny.jpg" alt="">
+                    <div class="prev-card-overlay">
+                        <span class="prev-card-num">01</span>
+                        <h3 class="prev-card-title">Lenny Starfighter: Aliens Stole My Sh**</h3>
+                        <p class="prev-card-sub">Game Project 6 (TGA)</p>
+                    </div>
+                    <div class="prev-card-hover-line"></div>
+                </a>
+                <a href="#" class="prev-card">
+                    <img src="Spite.png" alt="">
+                    <div class="prev-card-overlay">
+                        <span class="prev-card-num">02</span>
+                        <h3 class="prev-card-title">Spite: Blood and Gold</h3>
+                        <p class="prev-card-sub">Game Project 5 (TGA)</p>
+                    </div>
+                    <div class="prev-card-hover-line"></div>
+                </a>
+                <a href="#" class="prev-card">
+                    <img src="https://picsum.photos/seed/shader3/800/600?grayscale" alt="">
+                    <div class="prev-card-overlay">
+                        <span class="prev-card-num">03</span>
+                        <h3 class="prev-card-title">Damned Souls</h3>
+                        <p class="prev-card-sub">Large Game Project (BTH)</p>
+                    </div>
+                    <div class="prev-card-hover-line"></div>
+                </a>
+            </div>
+        </section>
         <!-- PREVIOUS WORK -->
         <section class="prev-section" id="previous">
             <div class="section-header">
                 <div class="section-title-group">
-                    <span class="section-num">02</span>
+                    <span class="section-num">03</span>
                     <h2 class="section-title">Previous Work</h2>
                 </div>
                 <span class="section-hint">TGA &amp; BTH coursework</span>
@@ -797,29 +196,29 @@
 
             <div class="prev-grid">
                 <a href="#" class="prev-card">
-                    <img src="https://images.unsplash.com/photo-1614729939124-032f0b2c6c05?w=800" alt="">
+                    <img src="https://picsum.photos/seed/Programming/800/600?grayscale" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">01</span>
-                        <h3 class="prev-card-title">Environment Study</h3>
-                        <p class="prev-card-sub">Unreal Engine</p>
+                        <h3 class="prev-card-title">D3D11 Deffered Renderer</h3>
+                        <p class="prev-card-sub">C++/HLSL Programming</p>
                     </div>
                     <div class="prev-card-hover-line"></div>
                 </a>
                 <a href="#" class="prev-card">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800" alt="">
+                    <img src="https://picsum.photos/seed/Animation/800/600?grayscale" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">02</span>
-                        <h3 class="prev-card-title">Procedural Tool</h3>
-                        <p class="prev-card-sub">Houdini</p>
+                        <h3 class="prev-card-title">Maya Plugin</h3>
+                        <p class="prev-card-sub">C++ Maya API</p>
                     </div>
                     <div class="prev-card-hover-line"></div>
                 </a>
                 <a href="#" class="prev-card">
-                    <img src="https://images.unsplash.com/photo-1614729939124-9a00c39ce0e0?w=800" alt="">
+                    <img src="https://picsum.photos/seed/Reverb/800/600?grayscale" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">03</span>
-                        <h3 class="prev-card-title">Shader Study</h3>
-                        <p class="prev-card-sub">HLSL</p>
+                        <h3 class="prev-card-title">Raycast Reverb System</h3>
+                        <p class="prev-card-sub">Unity C#</p>
                     </div>
                     <div class="prev-card-hover-line"></div>
                 </a>
@@ -831,8 +230,8 @@
             <div>
                 <p class="about-eyebrow">About</p>
                 <h2 class="about-heading">Technical<br>Artist</h2>
-                <p class="about-body">Technical Artist student at The Game Assembly in Malmö, working on my thesis at BTH. Bridging the gap between art and technology.</p>
-                <p class="about-body">Specializing in shader development, procedural content generation, and tools that empower artists within engine environments.</p>
+                <p class="about-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit purus lacus, non pretium ante aliquam vitae. In ut lorem pellentesque, tristique justo sed, tincidunt.</p>
+                <p class="about-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum magna nec velit fringilla, fringilla.</p>
             </div>
 
             <div>
@@ -875,35 +274,6 @@
 
     </main>
 
-
-    <script>
-        const btn = document.getElementById('hamburgerBtn');
-        const drawer = document.getElementById('drawer');
-        const overlay = document.getElementById('drawerOverlay');
-        const closeBtn = document.getElementById('drawerClose');
-
-        function openDrawer() {
-            drawer.classList.add('open');
-            overlay.classList.add('open');
-            btn.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeDrawer() {
-            drawer.classList.remove('open');
-            overlay.classList.remove('open');
-            btn.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        btn.addEventListener('click', openDrawer);
-        closeBtn.addEventListener('click', closeDrawer);
-        overlay.addEventListener('click', closeDrawer);
-
-        // close drawer when a nav link is tapped
-        document.querySelectorAll('.drawer-link').forEach(link => {
-            link.addEventListener('click', closeDrawer);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

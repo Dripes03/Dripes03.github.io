@@ -1,27 +1,26 @@
-// Smooth scroll animation on elements
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
+/* ── DRAWER ── */
+const btn      = document.getElementById('hamburgerBtn');
+const drawer   = document.getElementById('drawer');
+const overlay  = document.getElementById('drawerOverlay');
+const closeBtn = document.getElementById('drawerClose');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
+function openDrawer() {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    btn.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.style.overflow = '';
+}
 
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
+if (btn)      btn.addEventListener('click', openDrawer);
+if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+if (overlay)  overlay.addEventListener('click', closeDrawer);
 
-// Dynamic nav background on scroll
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 100) {
-        nav.style.background = 'rgba(10, 10, 10, 0.95)';
-    } else {
-        nav.style.background = 'rgba(10, 10, 10, 0.8)';
-    }
+document.querySelectorAll('.drawer-link').forEach(link => {
+    link.addEventListener('click', closeDrawer);
 });

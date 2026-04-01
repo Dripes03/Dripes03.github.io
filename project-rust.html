@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snow VFX and Shader Development — Erik Svensson</title>
+    <title>Procedural Rust — Erik Svensson</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -85,19 +85,23 @@
             <a href="index.html" class="back-link">← Back to Portfolio</a>
         </div>
 
-        <div class="project-hero" style="background-image: url('project3.png')"></div>
+        <div class="project-hero project-hero--video">
+            <video class="project-hero-video" autoplay muted loop playsinline>
+                <source src="Images/Project1/Mainshot.webm" type="video/webm">
+            </video>
+        </div>
 
         <div class="project-header">
-            <p class="project-eyebrow">Shader Development</p>
-            <h1 class="project-title">Snow VFX and Shaders</h1>
+            <p class="project-eyebrow">Environment Art</p>
+            <h1 class="project-title">Procedural Rust</h1>
             <div class="project-meta">
                 <div class="meta-item">
                     <span class="meta-label">Role</span>
-                    <span class="meta-value">Technical Artist</span>
+                    <span class="meta-value">Technical / Environment Artist</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Tools</span>
-                    <span class="meta-value">Unreal Engine, Substance Designer, EmberGen</span>
+                    <span class="meta-value">Unreal Engine, Substance Designer</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Timeline</span>
@@ -105,32 +109,77 @@
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Category</span>
-                    <span class="meta-value">Shader and VFX Development</span>
+                    <span class="meta-value">Shaders</span>
                 </div>
             </div>
         </div>
 
         <div class="project-body">
             <h2>Project Overview</h2>
-            <p>Excepteur officia ut ad ex esse labore amet culpa nisi ipsum cillum reprehenderit fugiat velit. Aliqua cillum sunt ea cupidatat esse officia mollit. Amet exercitation ea amet reprehenderit deserunt consectetur non laboris et esse. Fugiat cupidatat adipisicing dolore velit. Sunt nulla consectetur ad aliqua excepteur Lorem.</p>
+            <p>This project showcases the creation of realistic procedural rust materials using Unreal Engine and Substance Designer. The materials dynamically respond to surface depth, allowing rust and moss to accumulate naturally in crevices and low-lying areas.</p>
+
+            <div class="media-row">
+                <div class="media-item">
+                    <video src="Images/Project1/Tank_Showcase.webm" autoplay loop muted playsinline></video>
+                    <!-- <img src="Images/Project1/Tank_Showcase.webm" alt="Tank with procedural rust — lit"> -->
+                    <p class="media-caption">Tank mesh — rust accumulation in lit scene</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project1/Car_Lit.png" alt="Car with procedural rust — lit">
+                    <p class="media-caption">Car mesh — full rust and moss blend</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project1/MainShot.png" alt="Main hero shot">
+                    <p class="media-caption">Hero shot — both meshes in scene</p>
+                </div>
+            </div>
 
             <h3>Technical Approach</h3>
-            <p>Elit sunt cillum minim aliquip fugiat nostrud sit cillum eu duis est ex sunt consequat. Laborum consectetur Lorem qui consequat adipisicing cillum pariatur cupidatat nostrud culpa ipsum anim reprehenderit. Sint ipsum Lorem ex laboris laborum pariatur mollit dolor amet. Fugiat labore laborum non esse. Officia fugiat in excepteur nostrud dolore consequat culpa pariatur dolor esse dolor.</p>
+            <p>This project uses signed distance field techniques which allow for a dynamic rust and moss layer height based on the depth of the surface.</p>
             <ul>
-                <li>Consectetur sunt labore mollit occaecat officia aliquip labore aute in esse.</li>
-                <li>Cillum exercitation sunt excepteur deserunt cillum.</li>
-                <li>Tempor consequat proident do nostrud exercitation proident nostrud deserunt aliqua elit.</li>
-                <li>Aliquip elit incididunt ipsum magna ullamco exercitation fugiat amet occaecat.</li>
+                <li>Blueprint system to manage and update SDF values for material parameters</li>
+                <li>Material Function for reusable shader logic shared across all meshes</li>
+                <li>Separate material layers for Base, Rust, and Moss — blended by SDF depth</li>
+                <li>Material Instances per mesh for per-object tuning</li>
             </ul>
 
-            <h3>Challenges & Solutions</h3>
-            <p>Dolor exercitation nisi consequat occaecat laborum. Qui pariatur velit reprehenderit commodo commodo enim voluptate ea nostrud duis sunt aliquip. Lorem aute exercitation anim consectetur enim esse id nulla in. Consequat ullamco non voluptate consectetur deserunt ea. Non mollit voluptate dolor deserunt pariatur minim mollit aute ullamco veniam ullamco qui incididunt.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/Project1/MaterialFunction.png" alt="Material Function graph">
+                    <p class="media-caption">Shared material function — SDF depth blending logic</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project1/BaseMaterial.png" alt="Base material graph">
+                    <p class="media-caption">Base material layer</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project1/RustMaterial.png" alt="Rust material graph">
+                    <p class="media-caption">Rust layer material</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project1/MossMaterial.png" alt="Moss material graph">
+                    <p class="media-caption">Moss layer material</p>
+                </div>
+            </div>
 
-            <h3>Results</h3>
-            <p>Anim adipisicing mollit sunt veniam esse aliquip pariatur aliqua ad esse labore ad velit laborum. Consectetur quis elit velit eiusmod ipsum duis velit exercitation dolore exercitation adipisicing amet cillum. Ipsum pariatur eiusmod tempor laboris labore officia incididunt. Quis ad eu nisi mollit et ad ex. Dolor dolor culpa adipisicing duis cillum reprehenderit. Enim incididunt excepteur sunt quis occaecat velit elit velit. Consectetur cupidatat minim quis dolore ex in non irure ipsum ex.</p>
+            <h3>Artistic Approach</h3>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/Project1/Tank_Lit_NoWater.png" alt="Tank — no water level">
+                    <p class="media-caption">Tank — dry state, no water SDF influence</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project1/Tank_Roughness.png" alt="Tank roughness map">
+                    <p class="media-caption">Roughness channel — rust vs. clean metal contrast</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project1/Blending Materials.png" alt="Material blending breakdown">
+                    <p class="media-caption">Layer blending — transition between rust and base</p>
+                </div>
+            </div>
 
             <h2>Key Learnings</h2>
-            <p>Irure ex ipsum ipsum sint elit minim culpa ea. Sint enim laboris ipsum non ut quis. Amet est non ex do sunt exercitation magna ex eu ad.</p>
+            <p>This project taught me valuable lessons about environmental storytelling through weathering and decay. The challenge of making military hardware look convincingly abandoned while maintaining visual interest pushed my skills in both artistic direction and technical execution.</p>
         </div>
 
         <footer>

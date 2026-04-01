@@ -3,36 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architectural Scene - Project Details</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Architectural Scene — Erik Svensson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">TECHNICAL ARTIST</div>
-        <ul class="nav-links">
-            <li><a href="index.html#specialization">Specialization</a></li>
-            <li><a href="index.html#work">Other Work</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+
+    <!-- MOBILE TOPBAR -->
+    <header class="mobile-topbar">
+        <div>
+            <p class="mobile-topbar-name">Erik Svensson</p>
+            <p class="mobile-topbar-role">Technical Artist</p>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- DRAWER OVERLAY -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- SLIDE-IN DRAWER -->
+    <nav class="drawer" id="drawer">
+        <div class="drawer-top">
+            <div>
+                <p class="drawer-name">Erik<br>Svensson</p>
+                <p class="drawer-role">Technical Artist</p>
+            </div>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+        </div>
+        <p class="drawer-desc">Shaders, procedural generation, real-time rendering, and pipeline tools for games and interactive media.</p>
+        <ul class="drawer-nav">
+            <li><a href="index.html#portfolio" class="drawer-link"><span class="drawer-nav-num">01</span> Portfolio</a></li>
+            <li><a href="index.html#previous" class="drawer-link"><span class="drawer-nav-num">02</span> Previous Work</a></li>
+            <li><a href="index.html#about" class="drawer-link"><span class="drawer-nav-num">03</span> About</a></li>
         </ul>
+        <div class="drawer-bottom">
+            <p class="drawer-social-label">Connect</p>
+            <div class="drawer-socials">
+                <a href="mailto:your.email@example.com">Email <span>↗</span></a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn <span>↗</span></a>
+                <a href="https://artstation.com" target="_blank">ArtStation <span>↗</span></a>
+                <a href="https://github.com" target="_blank">GitHub <span>↗</span></a>
+            </div>
+            <a href="mailto:your.email@example.com" class="drawer-cta">Get in Touch</a>
+        </div>
     </nav>
 
-    <!-- Project Detail Content -->
-    <section style="padding-top: 120px;">
-        <a href="index.html" class="back-button">← Back to Portfolio</a>
-        
-        <div class="project-detail-hero fade-in">
-            <img src="project2.jpg" alt="Architectural Scene">
+    <!-- FIXED SIDEBAR -->
+    <aside class="sidebar">
+        <div>
+            <p class="sidebar-name">Erik<br>Svensson</p>
+            <p class="sidebar-role">Technical Artist</p>
+            <p class="sidebar-desc">Shaders, procedural generation, real-time rendering, and pipeline tools for games and interactive media.</p>
         </div>
 
-        <div class="project-detail-header fade-in">
-            <h1>Architectural Scene</h1>
+        <nav>
+            <ul class="sidebar-nav">
+                <li><a href="index.html#portfolio"><span class="sidebar-nav-num">01</span> Portfolio</a></li>
+                <li><a href="index.html#previous"><span class="sidebar-nav-num">02</span> Previous Work</a></li>
+                <li><a href="index.html#about"><span class="sidebar-nav-num">03</span> About</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p class="sidebar-social-label">Connect</p>
+            <div class="sidebar-socials">
+                <a href="mailto:your.email@example.com">Email <span>↗</span></a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn <span>↗</span></a>
+                <a href="https://artstation.com" target="_blank">ArtStation <span>↗</span></a>
+                <a href="https://github.com" target="_blank">GitHub <span>↗</span></a>
+            </div>
+            <a href="mailto:your.email@example.com" class="sidebar-cta">Get in Touch</a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <div class="project-back">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+
+        <div class="project-hero" style="background-image: url('project2.jpg')"></div>
+
+        <div class="project-header">
+            <p class="project-eyebrow">Lighting &amp; FX</p>
+            <h1 class="project-title">Architectural Scene</h1>
             <div class="project-meta">
                 <div class="meta-item">
                     <span class="meta-label">Role</span>
-                    <span class="meta-value">Lighting Artist / Technical Artist</span>
+                    <span class="meta-value">Lighting / Technical Artist</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Tools</span>
@@ -44,12 +105,12 @@
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Category</span>
-                    <span class="meta-value">Lighting & VFX</span>
+                    <span class="meta-value">Lighting &amp; VFX</span>
                 </div>
             </div>
         </div>
 
-        <div class="project-content fade-in">
+        <div class="project-body">
             <h2>Project Overview</h2>
             <p>An atmospheric lighting study featuring a classical European palace reflected in still water during golden hour. This project explores advanced lighting techniques, volumetric effects, and realistic water reflections to create a moody, cinematic scene.</p>
 
@@ -86,28 +147,18 @@
 
             <h2>Key Learnings</h2>
             <p>This project deepened my understanding of natural lighting phenomena and how to replicate them in real-time rendering. The importance of reference photography and understanding how light behaves in different atmospheric conditions proved invaluable.</p>
-
-            <!-- Add more images here if available -->
-            <!-- <div class="image-gallery">
-                <div class="gallery-image">
-                    <img src="architectural-detail-1.jpg" alt="Day lighting comparison">
-                </div>
-                <div class="gallery-image">
-                    <img src="architectural-detail-2.jpg" alt="Lighting breakdown">
-                </div>
-            </div> -->
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://artstation.com" target="_blank">ArtStation</a>
-            <a href="https://github.com" target="_blank">GitHub</a>
-        </div>
-        <p>&copy; 2026 Technical Artist Portfolio. All rights reserved.</p>
-    </footer>
+        <footer>
+            <span class="footer-copy">© 2026 Erik Svensson — Technical Artist</span>
+            <div class="footer-links">
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://artstation.com" target="_blank">ArtStation</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </footer>
+
+    </main>
 
     <script src="script.js"></script>
 </body>
