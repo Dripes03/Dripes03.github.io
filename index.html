@@ -32,7 +32,7 @@
             </div>
             <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
         </div>
-        <p class="drawer-desc">Shaders, procedural generation, real-time rendering, and pipeline tools for games and interactive media.</p>
+        <p class="drawer-desc">Shaders, VFX, real-time rendering, and pipeline tools for games and interactive media.</p>
         <ul class="drawer-nav">
             <li><a href="#portfolio" class="drawer-link"><span class="drawer-nav-num">01</span> Portfolio</a></li>
             <li><a href="#previous" class="drawer-link"><span class="drawer-nav-num">02</span> Previous Work</a></li>
@@ -55,7 +55,7 @@
         <div>
             <p class="sidebar-name">Erik<br>Svensson</p>
             <p class="sidebar-role">Technical Artist</p>
-            <p class="sidebar-desc">Shaders, procedural generation, real-time rendering, and pipeline tools for games and interactive media.</p>
+            <p class="sidebar-desc">Shaders, VFX, real-time rendering, and pipeline tools for games and interactive media.</p>
         </div>
 
         <nav>
@@ -81,24 +81,6 @@
     <!-- MAIN SCROLLING CONTENT -->
     <main class="main">
 
-        <!-- MARQUEE -->
-        <!-- <div class="marquee-wrap">
-            <div class="marquee-track">
-                <span class="marquee-item">Shader Development</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Environment Art</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Procedural Systems</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Real-Time Rendering</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Pipeline Tools</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Lighting &amp; FX</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Shader Development</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Environment Art</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Procedural Systems</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Real-Time Rendering</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Pipeline Tools</span><span class="marquee-item marquee-dot">·</span>
-                <span class="marquee-item">Lighting &amp; FX</span><span class="marquee-item marquee-dot">·</span>
-            </div>
-        </div> -->
-
         <!-- PORTFOLIO -->
         <section class="portfolio-section" id="portfolio">
             <div class="section-header">
@@ -110,7 +92,7 @@
             </div>
 
             <div class="portfolio-layout">
-                <a href="project-desert.html" class="portfolio-card">
+                <a href="project-desert.html" class="portfolio-card" data-tga>
                     <img src="project3.png" alt="Snow VFX and Shaders">
                     <div class="portfolio-card-body">
                         <div>
@@ -121,7 +103,7 @@
                     </div>
                 </a>
 
-                <a href="project-rust.html" class="portfolio-card">
+                <a href="project-rust.html" class="portfolio-card" data-tga>
                     <img src="Preview_Lit.png" alt="Tactical Environment">
                     <div class="portfolio-card-body">
                         <div>
@@ -132,7 +114,7 @@
                     </div>
                 </a>
 
-                <a href="project-architectural.html" class="portfolio-card">
+                <a href="project-architectural.html" class="portfolio-card" data-tga>
                     <img src="project2.jpg" alt="Architectural Scene">
                     <div class="portfolio-card-body">
                         <div>
@@ -155,7 +137,7 @@
             </div>
 
             <div class="prev-grid">
-                <a href="#" class="prev-card">
+                <a href="#" class="prev-card" data-tga>
                     <img src="Lenny.jpg" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">01</span>
@@ -164,8 +146,8 @@
                     </div>
                     <div class="prev-card-hover-line"></div>
                 </a>
-                <a href="#" class="prev-card">
-                    <img src="Spite.png" alt="">
+                <a href="#" class="prev-card" data-tga>
+                    <img src="Spite.jpg" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">02</span>
                         <h3 class="prev-card-title">Spite: Blood and Gold</h3>
@@ -173,7 +155,7 @@
                     </div>
                     <div class="prev-card-hover-line"></div>
                 </a>
-                <a href="#" class="prev-card">
+                <a href="#" class="prev-card" data-bth>
                     <img src="https://picsum.photos/seed/shader3/800/600?grayscale" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">03</span>
@@ -195,7 +177,7 @@
             </div>
 
             <div class="prev-grid">
-                <a href="#" class="prev-card">
+                <a href="#" class="prev-card" data-bth>
                     <img src="https://picsum.photos/seed/Programming/800/600?grayscale" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">01</span>
@@ -204,7 +186,7 @@
                     </div>
                     <div class="prev-card-hover-line"></div>
                 </a>
-                <a href="#" class="prev-card">
+                <a href="#" class="prev-card" data-bth>
                     <img src="https://picsum.photos/seed/Animation/800/600?grayscale" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">02</span>
@@ -213,7 +195,7 @@
                     </div>
                     <div class="prev-card-hover-line"></div>
                 </a>
-                <a href="#" class="prev-card">
+                <a href="#" class="prev-card" data-bth>
                     <img src="https://picsum.photos/seed/Reverb/800/600?grayscale" alt="">
                     <div class="prev-card-overlay">
                         <span class="prev-card-num">03</span>
@@ -228,10 +210,11 @@
         <!-- ABOUT -->
         <section class="about-section" id="about">
             <div>
-                <p class="about-eyebrow">About</p>
+                <p class="about-eyebrow">About Me</p>
                 <h2 class="about-heading">Technical<br>Artist</h2>
-                <p class="about-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit purus lacus, non pretium ante aliquam vitae. In ut lorem pellentesque, tristique justo sed, tincidunt.</p>
-                <p class="about-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum magna nec velit fringilla, fringilla.</p>
+                <p class="about-body">Hi, I'm Erik! I'm a technical artist student at TGA Malmö. My passion lies in creating versatile and efficient solutions for pipeline and workflow optimization. I also specialize in VFX and shader development.</p>
+                <p class="about-body">I have a strong foundation in both artistic and technical aspects of game development. When i'm not developing games, you can find me playing video games, producing music or doing handy work.</p>
+                <p class="about-body">Thank you for taking the time to view my work!</p>
             </div>
 
             <div>

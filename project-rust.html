@@ -86,9 +86,7 @@
         </div>
 
         <div class="project-hero project-hero--video">
-            <video class="project-hero-video" autoplay muted loop playsinline>
-                <source src="Images/Project1/Mainshot.webm" type="video/webm">
-            </video>
+            <div class="project-hero" style="background-image: url('Images/Project1/MainShot.png');"></div>
         </div>
 
         <div class="project-header">
@@ -104,8 +102,8 @@
                     <span class="meta-value">Unreal Engine, Substance Designer</span>
                 </div>
                 <div class="meta-item">
-                    <span class="meta-label">Timeline</span>
-                    <span class="meta-value">3 weeks</span>
+                    <span class="meta-label">Collaborators</span>
+                    <span class="meta-value">None</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Category</span>
@@ -116,21 +114,23 @@
 
         <div class="project-body">
             <h2>Project Overview</h2>
-            <p>This project showcases the creation of realistic procedural rust materials using Unreal Engine and Substance Designer. The materials dynamically respond to surface depth, allowing rust and moss to accumulate naturally in crevices and low-lying areas.</p>
+            <p>This project showcases the creation of realistic procedural rust materials using Unreal Engine and Substance Designer. The materials dynamically respond to surface depth, allowing rust and moss to accumulate naturally in low-lying areas.</p>
 
             <div class="media-row">
                 <div class="media-item">
                     <video src="Images/Project1/Tank_Showcase.webm" autoplay loop muted playsinline></video>
                     <!-- <img src="Images/Project1/Tank_Showcase.webm" alt="Tank with procedural rust — lit"> -->
-                    <p class="media-caption">Tank mesh — rust accumulation in lit scene</p>
+                    <p class="media-caption">Tank mesh — Render pass visualization</p>
                 </div>
                 <div class="media-item">
-                    <img src="Images/Project1/Car_Lit.png" alt="Car with procedural rust — lit">
+                    <video src="Images/Project1/Car_Showcase.webm" autoplay loop muted playsinline ></video>
+                    <!-- <img src="Images/Project1/Car_Lit.png" alt="Car with procedural rust — lit"> -->
                     <p class="media-caption">Car mesh — full rust and moss blend</p>
                 </div>
                 <div class="media-item">
-                    <img src="Images/Project1/MainShot.png" alt="Main hero shot">
-                    <p class="media-caption">Hero shot — both meshes in scene</p>
+                    <video src="Images/Project1/Dynamic_Showcase.mp4" autoplay loop muted playsinline ></video>
+                    <!-- <img src="Images/Project1/MainShot.png" alt="Main hero shot"> -->
+                    <p class="media-caption">Showcase of dynamic rust and moss — both meshes in scene</p>
                 </div>
             </div>
 
@@ -146,8 +146,18 @@
             <div class="media-row">
                 <div class="media-item">
                     <img src="Images/Project1/MaterialFunction.png" alt="Material Function graph">
-                    <p class="media-caption">Shared material function — SDF depth blending logic</p>
+                    <p class="media-caption">Shared material function — Plane SDF depth logic with parameters to control fall-off and moss depth</p>
                 </div>
+                <div class="media-item">
+                    <video src="Images/Project1/Instance_Preview.mp4" autoplay loop muted playsinline ></video>
+                    <p class="media-caption">Material instance preview — dynamic rust and moss layer  tuning</p>
+                </div>
+            </div>
+
+            <h3>Artistic Approach</h3>
+            <p>Substance Designer was used to create the base textures for the rust material</p>
+            <p>In order to achieve a realistic look, I followed a reference-based approach, studying real-world rust and moss colours to guide texture creation process. This was done with the help of <a href="https://www.scribd.com/document/729851403/Color-Calibration-for-PBR-Materials-By-Grzegorz-Baran" target="_blank" rel="noopener" class="body-link"><i>Grzegorz Baran's study (Color Calibration For PBR Materials, 2025)</i></a></p>
+            <div class="media-row">
                 <div class="media-item">
                     <img src="Images/Project1/BaseMaterial.png" alt="Base material graph">
                     <p class="media-caption">Base material layer</p>
@@ -161,25 +171,21 @@
                     <p class="media-caption">Moss layer material</p>
                 </div>
             </div>
-
-            <h3>Artistic Approach</h3>
             <div class="media-row">
                 <div class="media-item">
-                    <img src="Images/Project1/Tank_Lit_NoWater.png" alt="Tank — no water level">
-                    <p class="media-caption">Tank — dry state, no water SDF influence</p>
+                    <img src="Images/Project1/Blending Materials.png" alt="Material blending graph">
+                    <p class="media-caption">The use of the custom material function used with unreal engine's material blending</p>
                 </div>
                 <div class="media-item">
-                    <img src="Images/Project1/Tank_Roughness.png" alt="Tank roughness map">
-                    <p class="media-caption">Roughness channel — rust vs. clean metal contrast</p>
+                    <img src="Images/Project1/BlueprintSDF.png" alt="Blueprint SDF logic">
+                    <p class="media-caption">Blueprint for managing and updating SDF values</p>
                 </div>
-                <div class="media-item">
-                    <img src="Images/Project1/Blending Materials.png" alt="Material blending breakdown">
-                    <p class="media-caption">Layer blending — transition between rust and base</p>
-                </div>
+              
             </div>
 
             <h2>Key Learnings</h2>
-            <p>This project taught me valuable lessons about environmental storytelling through weathering and decay. The challenge of making military hardware look convincingly abandoned while maintaining visual interest pushed my skills in both artistic direction and technical execution.</p>
+            <p>This project taught me about the power of procedural techniques in creating dynamic and visually rich environments. The integration of signed distance fields allowed for flexible and efficient implementation of weathering effects, which is a skill I can apply to future projects.</p>
+            <p></p>
         </div>
 
         <footer>
@@ -192,6 +198,12 @@
         </footer>
 
     </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <div class="lightbox-inner" id="lightboxInner"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
