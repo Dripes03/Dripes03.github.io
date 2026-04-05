@@ -7,8 +7,10 @@
     --surface: #1c1c1c;
     --border: rgba(255,255,255,0.07);
     --text: #e8e8e8;
-    --muted: #a3a3a3;
+    --muted: #b9b9b9;
     --accent: #bdbdbd;
+    --disclaimer-bg: rgba(255, 255, 255, 0.05);
+    --disclaimer : #ffa600;
     --sidebar-w: 280px;
 }
 
@@ -441,6 +443,17 @@ body { background: var(--bg); color: var(--text); font-family: 'Space Grotesk', 
     color: var(--muted);
     line-height: 1.8;
     margin-bottom: 0.9rem;
+}
+
+.disclaimer {
+    font-size: 0.88rem;
+    color: var(--disclaimer);
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--disclaimer-bg);
 }
 
 .skill-row {
@@ -895,6 +908,9 @@ footer {
     gap: 1.25rem;
     margin: 1.75rem 0;
 }
+.media-row--featured {
+    max-width: 60%;
+}
 .media-item {
     display: flex;
     flex-direction: column;
@@ -920,11 +936,12 @@ footer {
     font-size: 0.58rem;
     color: var(--accent);
     text-align: center;
-    margin-bottom: 0;
-    /* letter-spacing: 0.1em; */
-    /* text-transform: uppercase; */
-    padding: 0.6rem 0.75rem;
+    margin: 0;
+    padding: 0.35rem 0.75rem 0.3rem;
     line-height: 1.5;
+}
+.media-description {
+    margin: 0;
 }
 
 /* ── LIGHTBOX ── */

@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(ls \"c:\\\\Users\\\\erik.svensson14\\\\OneDrive - Academedia\\\\Documents\\\\GitHub\\\\Dripes03.github.io\"/index*.html)"
-    ]
-  }
-}
