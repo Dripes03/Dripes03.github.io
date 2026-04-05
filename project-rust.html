@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procedural Rust — Erik Svensson</title>
+    <title>Procedural Rust - Erik Svensson</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -32,7 +32,7 @@
             </div>
             <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
         </div>
-        <p class="drawer-desc">Shaders, procedural generation, real-time rendering, and pipeline tools for games and interactive media.</p>
+        <p class="drawer-desc">Shaders, VFX, real-time rendering, and pipeline tools for games and interactive media.</p>
         <ul class="drawer-nav">
             <li><a href="index.html#portfolio" class="drawer-link"><span class="drawer-nav-num">01</span> Portfolio</a></li>
             <li><a href="index.html#previous" class="drawer-link"><span class="drawer-nav-num">02</span> Previous Work</a></li>
@@ -55,7 +55,7 @@
         <div>
             <p class="sidebar-name">Erik<br>Svensson</p>
             <p class="sidebar-role">Technical Artist</p>
-            <p class="sidebar-desc">Shaders, procedural generation, real-time rendering, and pipeline tools for games and interactive media.</p>
+            <p class="sidebar-desc">Shaders, VFX, real-time rendering, and pipeline tools for games and interactive media.</p>
         </div>
 
         <nav>
@@ -88,7 +88,7 @@
         <div class="project-hero project-hero--video">
             <div class="project-hero" style="background-image: url('Images/Project1/MainShot.png');"></div>
         </div>
-
+        
         <div class="project-header">
             <p class="project-eyebrow">Environment Art</p>
             <h1 class="project-title">Procedural Rust</h1>
@@ -114,23 +114,28 @@
 
         <div class="project-body">
             <h2>Project Overview</h2>
-            <p>This project showcases the creation of realistic procedural rust materials using Unreal Engine and Substance Designer. The materials dynamically respond to surface depth, allowing rust and moss to accumulate naturally in low-lying areas.</p>
-
+            <p>This project showcases the creation of realistic procedural rust materials using Unreal Engine and Substance Designer. 
+                The materials dynamically respond to surface depth, allowing rust and moss to accumulate naturally in low-lying areas.</p>
+            <div class="media-row">
+                <div class = "media-item">
+                    <video src="Images/Project1/Main2.webm" autoplay loop muted playsinline></video>
+                </div>
+            </div>
             <div class="media-row">
                 <div class="media-item">
                     <video src="Images/Project1/Tank_Showcase.webm" autoplay loop muted playsinline></video>
-                    <!-- <img src="Images/Project1/Tank_Showcase.webm" alt="Tank with procedural rust — lit"> -->
-                    <p class="media-caption">Tank mesh — Render pass visualization</p>
+                    <!-- <img src="Images/Project1/Tank_Showcase.webm" alt="Tank with procedural rust - lit"> -->
+                    <p class="media-caption">Tank mesh - Render pass visualization</p>
                 </div>
                 <div class="media-item">
                     <video src="Images/Project1/Car_Showcase.webm" autoplay loop muted playsinline ></video>
-                    <!-- <img src="Images/Project1/Car_Lit.png" alt="Car with procedural rust — lit"> -->
-                    <p class="media-caption">Car mesh — full rust and moss blend</p>
+                    <!-- <img src="Images/Project1/Car_Lit.png" alt="Car with procedural rust - lit"> -->
+                    <p class="media-caption">Car mesh - full rust and moss blend</p>
                 </div>
                 <div class="media-item">
                     <video src="Images/Project1/Dynamic_Showcase.mp4" autoplay loop muted playsinline ></video>
                     <!-- <img src="Images/Project1/MainShot.png" alt="Main hero shot"> -->
-                    <p class="media-caption">Showcase of dynamic rust and moss — both meshes in scene</p>
+                    <p class="media-caption">Showcase of dynamic rust and moss - both meshes in scene</p>
                 </div>
             </div>
 
@@ -139,25 +144,27 @@
             <ul>
                 <li>Blueprint system to manage and update SDF values for material parameters</li>
                 <li>Material Function for reusable shader logic shared across all meshes</li>
-                <li>Separate material layers for Base, Rust, and Moss — blended by SDF depth</li>
+                <li>Separate material layers for Base, Rust, and Moss - blended by SDF depth</li>
                 <li>Material Instances per mesh for per-object tuning</li>
             </ul>
 
             <div class="media-row">
                 <div class="media-item">
                     <img src="Images/Project1/MaterialFunction.png" alt="Material Function graph">
-                    <p class="media-caption">Shared material function — Plane SDF depth logic with parameters to control fall-off and moss depth</p>
+                    <p class="media-caption">Shared material function - Plane SDF depth logic with parameters to control fall-off and moss depth</p>
                 </div>
                 <div class="media-item">
-                    <video src="Images/Project1/Instance_Preview.mp4" autoplay loop muted playsinline ></video>
-                    <p class="media-caption">Material instance preview — dynamic rust and moss layer  tuning</p>
+                    <img src="Images/Project1/Blending Materials.png" alt="Material blending graph">
+                    <p class="media-caption">The use of the custom material function used with unreal engine's material blending</p>
                 </div>
             </div>
 
             <h3>Artistic Approach</h3>
             <p>Substance Designer was used to create the base textures for the rust material</p>
-            <p>In order to achieve a realistic look, I followed a reference-based approach, studying real-world rust and moss colours to guide texture creation process. This was done with the help of <a href="https://www.scribd.com/document/729851403/Color-Calibration-for-PBR-Materials-By-Grzegorz-Baran" target="_blank" rel="noopener" class="body-link"><i>Grzegorz Baran's study (Color Calibration For PBR Materials, 2025)</i></a></p>
-            <div class="media-row">
+            <p>In order to achieve a realistic look, I followed a reference-based approach, studying real-world rust and moss colours to guide texture creation process. 
+                This was done with the help of <a href="https://www.scribd.com/document/729851403/Color-Calibration-for-PBR-Materials-By-Grzegorz-Baran" target="_blank" rel="noopener" class="body-link"><i>Grzegorz Baran's study (Color Calibration For PBR Materials, 2025)</i></a>
+            </p>
+            <!-- <div class="media-row">
                 <div class="media-item">
                     <img src="Images/Project1/BaseMaterial.png" alt="Base material graph">
                     <p class="media-caption">Base material layer</p>
@@ -170,8 +177,22 @@
                     <img src="Images/Project1/MossMaterial.png" alt="Moss material graph">
                     <p class="media-caption">Moss layer material</p>
                 </div>
-            </div>
+            </div> -->
+
             <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/Project1/MaterialFunction.png" alt="Material Function graph">
+                    <p class="media-caption">Shared material function </p>
+                    <p class="media-description">A material function is used to encapsulate core SDF calculations and parameters for reuse across different materials.</p>
+                </div>
+                <div class="media-item">
+                    <video src="Images/Project1/Instance_Preview.mp4" autoplay loop muted playsinline ></video>
+                    <p class="media-caption">Material instance preview</p>
+                    <p class="media-description">This is a look in to how the user can tweak the material parameters in real-time in order to achieve the desired visual outcome.</p>
+                </div>
+            </div>
+
+            <!-- <div class="media-row">
                 <div class="media-item">
                     <img src="Images/Project1/Blending Materials.png" alt="Material blending graph">
                     <p class="media-caption">The use of the custom material function used with unreal engine's material blending</p>
@@ -180,16 +201,26 @@
                     <img src="Images/Project1/BlueprintSDF.png" alt="Blueprint SDF logic">
                     <p class="media-caption">Blueprint for managing and updating SDF values</p>
                 </div>
-              
-            </div>
+            </div> -->
 
             <h2>Key Learnings</h2>
-            <p>This project taught me about the power of procedural techniques in creating dynamic and visually rich environments. The integration of signed distance fields allowed for flexible and efficient implementation of weathering effects, which is a skill I can apply to future projects.</p>
-            <p></p>
+            <p> This project taught me about the use of blueprints to manage shader parameters in order to create dynamic and visually rich materials. 
+                It also deepened my understanding of signed distance field techniques and how they can be used to create procedural effects that respond to surface geometry. 
+                Overall, this project was a valuable learning experience in both technical shader development and artistic material creation.
+            </p>
+            <p>If I had more time, I would have liked to explore additional procedural techniques for creating more complex weathering effects and further optimize the material system for better performance.</p>
+
+            <h2>Assets Used</h2>
+            <ul class="reference-list">
+                <li><a href="https://sketchfab.com/3d-models/general-dynamics-m1a2-abrams-main-battle-tank-10a16c96ca8b4ebc855915f5d5202046" target="_blank">Tank Model</a></li>
+                <li><a href="https://sketchfab.com/3d-models/old-rusty-car-95baa20ebc5d4d2e869f0b549be838fe" target="_blank">Car Model</a></li>
+                <li><a href="https://sketchfab.com/3d-models/barrels-dd939d6e5f5d478ead53622ddaa120c7" target="_blank">Barrel Model</a></li>
+                <li><a href="https://fab.com/s/daffd7fa35e5" target="_blank">Environment Models</a></li>
+            </ul>
         </div>
 
         <footer>
-            <span class="footer-copy">© 2026 Erik Svensson — Technical Artist</span>
+            <span class="footer-copy">© 2026 Erik Svensson - Technical Artist</span>
             <div class="footer-links">
                 <a href="https://linkedin.com" target="_blank">LinkedIn</a>
                 <a href="https://artstation.com" target="_blank">ArtStation</a>

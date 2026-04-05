@@ -748,6 +748,18 @@ footer {
     object-fit: cover;
 }
 
+.mainPreview {
+    max-width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.reference-list a
+{
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
 /* darkness overlay — can't use filter on the element itself
    because it would break background-attachment: fixed */
 .project-hero::after {
@@ -899,12 +911,18 @@ footer {
     display: block;
     object-fit: cover;
 }
+.media-description {
+    color: var(--text);
+    padding: 0.5rem;
+}
 .media-caption {
     font-family: 'Space Mono', monospace;
     font-size: 0.58rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 0;
+    /* letter-spacing: 0.1em; */
+    /* text-transform: uppercase; */
     padding: 0.6rem 0.75rem;
     line-height: 1.5;
 }
