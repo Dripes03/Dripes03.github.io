@@ -9,74 +9,7 @@
 </head>
 <body>
 
-    <!-- MOBILE TOPBAR (visible on mobile only) -->
-    <header class="mobile-topbar">
-        <div>
-            <p class="mobile-topbar-name">Erik Svensson</p>
-            <p class="mobile-topbar-role">Technical Artist</p>
-        </div>
-        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
-            <span></span><span></span><span></span>
-        </button>
-    </header>
-
-    <!-- DRAWER OVERLAY -->
-    <div class="drawer-overlay" id="drawerOverlay"></div>
-
-    <!-- SLIDE-IN DRAWER -->
-    <nav class="drawer" id="drawer">
-        <div class="drawer-top">
-            <div>
-                <p class="drawer-name">Erik<br>Svensson</p>
-                <p class="drawer-role">Technical Artist</p>
-            </div>
-            <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
-        </div>
-        <p class="drawer-desc">Shaders, VFX, real-time rendering, and pipeline tools for games and interactive media.</p>
-        <ul class="drawer-nav">
-            <li><a href="#portfolio" class="drawer-link"><span class="drawer-nav-num">01</span> Portfolio</a></li>
-            <li><a href="#previous" class="drawer-link"><span class="drawer-nav-num">02</span> Previous Work</a></li>
-            <li><a href="#about" class="drawer-link"><span class="drawer-nav-num">03</span> About</a></li>
-        </ul>
-        <div class="drawer-bottom">
-            <p class="drawer-social-label">Connect</p>
-            <div class="drawer-socials">
-                <a href="mailto:your.email@example.com">Email <span>↗</span></a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn <span>↗</span></a>
-                <a href="https://artstation.com" target="_blank">ArtStation <span>↗</span></a>
-                <a href="https://github.com" target="_blank">GitHub <span>↗</span></a>
-            </div>
-            <a href="mailto:your.email@example.com" class="drawer-cta">Get in Touch</a>
-        </div>
-    </nav>
-
-    <!-- FIXED SIDEBAR -->
-    <aside class="sidebar">
-        <div>
-            <p class="sidebar-name">Erik<br>Svensson</p>
-            <p class="sidebar-role">Technical Artist</p>
-            <p class="sidebar-desc">Shaders, VFX, real-time rendering, and pipeline tools for games and interactive media.</p>
-        </div>
-
-        <nav>
-            <ul class="sidebar-nav">
-                <li><a href="#portfolio"><span class="sidebar-nav-num">01</span> Portfolio</a></li>
-                <li><a href="#previous"><span class="sidebar-nav-num">02</span> Previous Work</a></li>
-                <li><a href="#about"><span class="sidebar-nav-num">03</span> About</a></li>
-            </ul>
-        </nav>
-
-        <div class="sidebar-bottom" id="contact">
-            <p class="sidebar-social-label">Connect</p>
-            <div class="sidebar-socials">
-                <a href="mailto:your.email@example.com">Email <span>↗</span></a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn <span>↗</span></a>
-                <a href="https://artstation.com" target="_blank">ArtStation <span>↗</span></a>
-                <a href="https://github.com" target="_blank">GitHub <span>↗</span></a>
-            </div>
-            <a href="mailto:your.email@example.com" class="sidebar-cta">Get in Touch</a>
-        </div>
-    </aside>
+    <script src="sidebar.js"></script>
 
     <!-- MAIN SCROLLING CONTENT -->
     <main class="main">
@@ -92,7 +25,7 @@
             </div>
 
             <div class="portfolio-layout">
-                <a href="project-desert.html" class="portfolio-card" data-tga>
+                <a href="the-last-empire.html" class="portfolio-card" data-tga>
                     <!-- <img src="project3.png" alt="Snow VFX and Shaders"> -->
                     <video autoplay loop muted playsinline class="portfolio-video">
                         <source src="Snowthumb.webm" type="video/webm">
@@ -101,8 +34,8 @@
                     </video>
                     <div class="portfolio-card-body">
                         <div>
-                            <p class="portfolio-tag-inline">VFX &amp; Shader Development</p>
-                            <h3 class="portfolio-card-name">Snow VFX and Shaders</h3>
+                            <p class="portfolio-tag-inline">Snow VFX &amp; Shader Development</p>
+                            <h3 class="portfolio-card-name">The Last Empire</h3>
                         </div>
                         <div class="portfolio-arrow">→</div>
                     </div>
@@ -124,12 +57,17 @@
                     </div>
                 </a>
 
-                <a href="project-architectural.html" class="portfolio-card" data-tga>
-                    <img src="project2.png" alt="Architectural Scene">
+                <a href="palace-on-the-isle.html" class="portfolio-card" data-tga>
+                    <!-- <img src="project2.png" alt="Palace on the Isle"> -->
+                     <video autoplay loop muted playsinline class="portfolio-video">
+                         <source src="PalaceMain.webm" type="video/webm">
+                         <source src="PalaceMain.mp4" type="video/mp4">
+                         Your browser does not support the video tag.
+                     </video>
                     <div class="portfolio-card-body">
                         <div>
-                            <p class="portfolio-tag-inline">Lighting &amp; FX</p>
-                            <h3 class="portfolio-card-name">Architectural Scene</h3>
+                            <p class="portfolio-tag-inline">VFX &amp; Shaders</p>
+                            <h3 class="portfolio-card-name">Palace on the Isle</h3>
                         </div>
                         <div class="portfolio-arrow">→</div>
                     </div>
