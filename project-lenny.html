@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliens Stole My Sh** - Erik Svensson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script src="sidebar.js"></script>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <div class="project-back">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+
+        <div class="project-hero" style="background-image: url('Lenny.jpg')"></div>
+
+        <div class="project-header">
+            <p class="project-eyebrow">Game Project 6 - TGA</p>
+            <h1 class="project-title">Aliens Stole My Sh**</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Technical Artist</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Software</span>
+                    <span class="meta-value">Custom DX11 Engine</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">21</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">Game Project</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-body">
+
+        <div class="media-row">
+            <div class="media-item">
+                <video autoplay loop muted playsinline>
+                    <source src="Images/Lenny/LennyTrailer.mp4" type="video/mp4">
+                    <source src="Images/Lenny/LennyTrailer.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="media-caption">Trailer of the final project</p>
+            </div>
+        </div>
+            <h2>Project Overview</h2>
+            <p>This was the second collaborative project I worked on, focusing on the development of visual effects and shaders for a third-person game based on Spyro.</p>
+            <p>Production of the game spanned over 14 weeks(20h/week).</p>
+            <h2>My Contributions</h2>
+            <h3>Asset Sorting Tool</h3>
+            <p>The graphical artists in our team spent a large amount of time distributing textures and models across different directories.
+                To streamline this process, I developed a tool that automatically sorted assets into appropriate folders based on their file types and a predetermined category. 
+                This significantly reduced the chance of human error and time spent on manual organization and allowed artists to focus more on their creative work.</p>
+            </p>
+            <p>
+                The tool was built using Python and various libraries for file handling and user interface design. The python script was then built into an executable to avoid the risk of requiring the dependencies. 
+                The user would drop their assets into a designated folder, and the tool would automatically sort them into the correct directories on execution based on predefined rules.
+            </p>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/Lenny/assetsorter.png" alt="Asset Sorting Tool UI">
+                    <p class="media-caption">Asset Sorting Tool</p>
+                </div>
+            </div>
+            <h3>Houdini Asset Export Tool</h3>
+            <p>Houdini Engine was used via Unreal Engine to generate unique procedural assets for the game. 
+                The problem was that the assets needed to be exported in a specific format for the game engine to utilize them effectively. 
+                <br>I developed a tool that automated this export process, ensuring consistency and saving significant time during development.
+                The tool was built for Unreal Engine using Python.
+            </p>
+            <p><b>General process of tool:</b></p>
+            <ul>
+                <li>Create a list of all collision and render meshes</li>
+                <li>Export assets as fbx in both Unreal Engine and Custom Engine content folders</li>
+                <li>Re-bind exported render meshes to corresponding static mesh actor</li>
+                <li>Add PhysX component to render meshes and bind collision mesh</li>
+            </ul>
+            <p>This tool significantly reduced the amount of clicks from over 800 down to just a few, allowing the team to focus on creative tasks rather than repetitive manual processes.</p>
+            
+            <h3>Compute Shaders</h3>
+            <p>To optimize performance I implemented compute shaders for the volumetric fog. 
+                This allowed for more efficient rendering of the fog effects while maintaining visual quality.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="Images/Lenny/Volumetric.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="media-caption">Early iteration of volumetric fog</p>
+                </div>
+                <div class="media-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="Images/Lenny/Volumetric2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="media-caption">Final implementation of volumetric fog</p>
+                </div>
+            </div>
+
+
+            <h2>Key Learnings</h2>
+            <p>Through this project, I learned the impact of automation on productivity and the importance of efficient tooling in a fast-paced development environment.</p>
+        </div>
+
+        <footer>
+            <span class="footer-copy">© 2026 Erik Svensson - Technical Artist</span>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/erik-svensson-b12412166" target="_blank">LinkedIn</a>
+                <a href="mailto:eriksvensson.contact@gmail.com">Email</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <div class="lightbox-inner" id="lightboxInner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

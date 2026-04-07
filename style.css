@@ -1018,6 +1018,8 @@ footer {
     .project-meta { grid-template-columns: 1fr 1fr; }
     .project-title { font-size: 2rem; }
     .project-body { padding: 2rem 1.5rem; max-width: 100%; }
+    .media-row { grid-template-columns: 1fr; }
+    .media-row--featured { max-width: 100%; }
 }
 @media (max-width: 540px) {
     .project-meta { grid-template-columns: 1fr; }

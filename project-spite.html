@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spite: Blood and Gold - Erik Svensson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script src="sidebar.js"></script>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <div class="project-back">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+
+        <div class="project-hero" style="background-image: url('Spite.jpg')"></div>
+
+        <div class="project-header">
+            <p class="project-eyebrow">Game Project 5 - TGA</p>
+            <h1 class="project-title">Spite: Blood and Gold</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Technical Artist</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Software</span>
+                    <span class="meta-value">Custom DX11 Engine</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">21</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">Game Project</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-body">
+
+            <div class="media-row">
+                <div class="media-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="Images/Spite/SpiteTrailer.mp4" type="video/mp4">
+                        <source src="Images/Spite/SpiteTrailer.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="media-caption">Trailer of the final project</p>
+                </div>
+            </div>
+            <h2>Project Overview</h2>
+            <p>This was my first large-scale project at TGA, where I served as a Technical Artist. Spite: Blood and Gold was a third-person action game using Diablo III as a reference.</p>
+            <p>Production of the game spanned over 14 weeks(20h/week).</p>
+            <h2>My Contributions</h2>
+            <p>My contributions to the project included developing visual effects, shaders and tools for the development pipeline.</p>
+            <h3>Diablo Camera Tool</h3>
+            <p>A blender tool writen in Python for graphical artists to import the exact camera angle from Diablo III. 
+                This was used to create assets in the correct metrics and allow the developer to get a rough preview of how the assets would look in the game without having to import them into the engine.</p>
+            </p>
+            <div class="media-row">
+                <div class="media-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="Images/Spite/BlenderTool.mp4" type="video/mp4">
+                        <!-- <source src="Images/Spite/SpiteTrailer.webm" type="video/webm"> -->
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="media-caption">Blender tool demonstration</p>
+                </div>
+            </div>
+            <h3>LUT Colour Grading</h3>
+            <p>I developed and implemented LUT (Look-Up Table) colour grading solutions to ensure consistent and visually appealing colour schemes across different lighting conditions and environments in the game.</p>
+             <div class="media-row">
+                <div class="media-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="Images/Spite/Lut.mp4" type="video/mp4">
+                        <source src="Images/Spite/Lut.webm" type="video/webm">
+                        <!-- <source src="Images/Spite/SpiteTrailer.webm" type="video/webm"> -->
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="media-caption">LUT texture example</p>
+                </div>
+                <div class="media-item">
+                    <image src="Images/Spite/LUT.png" alt="LUT colour grading" class="media-image">
+                    <p class="media-caption">LUT colour grading</p>
+                </div>
+            </div>
+
+            <h2>Key Learnings</h2>
+            <p>This project taught me the experiance of collaborating with a large team of multiple diciplines. 
+                I also learned the importance of clear communication and documentation in a fast-paced development environment.</p>
+        </div>
+
+        <footer>
+            <span class="footer-copy">© 2026 Erik Svensson - Technical Artist</span>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/erik-svensson-b12412166" target="_blank">LinkedIn</a>
+                <a href="mailto:eriksvensson.contact@gmail.com">Email</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <div class="lightbox-inner" id="lightboxInner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
