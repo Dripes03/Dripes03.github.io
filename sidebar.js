@@ -34,8 +34,7 @@
         <p class="drawer-social-label">Connect</p>
         <div class="drawer-socials">
             <a href="mailto:your.email@example.com">Email <span>↗</span></a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn <span>↗</span></a>
-            <a href="https://artstation.com" target="_blank">ArtStation <span>↗</span></a>
+            <a href="https://www.linkedin.com/in/erik-svensson-b12412166" target="_blank">LinkedIn <span>↗</span></a>
             <a href="https://github.com" target="_blank">GitHub <span>↗</span></a>
         </div>
         <a href="mailto:your.email@example.com" class="drawer-cta">Get in Touch</a>
@@ -63,8 +62,7 @@
         <p class="sidebar-social-label">Connect</p>
         <div class="sidebar-socials">
             <a href="mailto:your.email@example.com">Email <span>↗</span></a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn <span>↗</span></a>
-            <a href="https://artstation.com" target="_blank">ArtStation <span>↗</span></a>
+            <a href="https://www.linkedin.com/in/erik-svensson-b12412166" target="_blank">LinkedIn <span>↗</span></a>
             <a href="https://github.com" target="_blank">GitHub <span>↗</span></a>
         </div>
         <a href="mailto:your.email@example.com" class="sidebar-cta">Get in Touch</a>

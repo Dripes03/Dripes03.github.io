@@ -88,7 +88,8 @@
 
             <h2>Snow Shader</h2>
             <p>Vertex and pixel normals are used to create realistic snow coverage.</p>
-
+            <p>In order to achieve realistic snow, displacement mapping is utilized to increase the height of the snow surface and simulate buildup. 
+                This project utilizes Unreal Engine's Nanite technology to get higher detail of displacement. Traditional tesselation may also be used instead (but may not provide as much detail)</p>
             <div class="media-row">
                 <div class="media-item">
                     <img src="Images/Project2/SnowMaterialPreview.png" alt="Snow Shader" class="media-image">
@@ -101,11 +102,10 @@
             </div>
 
             <h3>Challenges & Solutions</h3>
-            <p>Dolor exercitation nisi consequat occaecat laborum. Qui pariatur velit reprehenderit commodo commodo enim voluptate ea nostrud duis sunt aliquip. Lorem aute exercitation anim consectetur enim esse id nulla in. Consequat ullamco non voluptate consectetur deserunt ea. Non mollit voluptate dolor deserunt pariatur minim mollit aute ullamco veniam ullamco qui incididunt.</p>
+            <p>One of the main challenges was creating a snow falling effect that was both dense and optimized for performance. Initially, the snowfall was in world space, causing to lack density and to have poor performance. Changing the snowfall to be in the cameras frustum improved both density and performance.</p>
+            
 
-            <h3>Results</h3>
-            <p>Anim adipisicing mollit sunt veniam esse aliquip pariatur aliqua ad esse labore ad velit laborum. Consectetur quis elit velit eiusmod ipsum duis velit exercitation dolore exercitation adipisicing amet cillum. Ipsum pariatur eiusmod tempor laboris labore officia incididunt. Quis ad eu nisi mollit et ad ex. Dolor dolor culpa adipisicing duis cillum reprehenderit. Enim incididunt excepteur sunt quis occaecat velit elit velit. Consectetur cupidatat minim quis dolore ex in non irure ipsum ex.</p>
-
+          
             <h2>Key Learnings</h2>
             <p>Irure ex ipsum ipsum sint elit minim culpa ea. Sint enim laboris ipsum non ut quis. Amet est non ex do sunt exercitation magna ex eu ad.</p>
         </div>
@@ -113,7 +113,7 @@
         <footer>
             <span class="footer-copy">© 2026 Erik Svensson — Technical Artist</span>
             <div class="footer-links">
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/erik-svensson-b12412166" target="_blank">LinkedIn</a>
                 <a href="https://artstation.com" target="_blank">ArtStation</a>
                 <a href="https://github.com" target="_blank">GitHub</a>
             </div>
