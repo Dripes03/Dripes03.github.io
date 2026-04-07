@@ -45,16 +45,60 @@
 
         <div class="project-body">
             <h2>Project Overview</h2>
-            <p>Excepteur officia ut ad ex esse labore amet culpa nisi ipsum cillum reprehenderit fugiat velit. Aliqua cillum sunt ea cupidatat esse officia mollit. Amet exercitation ea amet reprehenderit deserunt consectetur non laboris et esse. Fugiat cupidatat adipisicing dolore velit. Sunt nulla consectetur ad aliqua excepteur Lorem.</p>
+            <p>This project was a collabotation with <a href="https://lukasax.com/" target="_blank" rel="noopener" class="body-link"><b>Lukas Ax</b></a>. You can find the summer version of the project on his website at <a href="https://lukasax.com/third-person-action/" target="_blank" rel="noopener" class="body-link"><b>lukasax.com/third-person-action</b></a>.</p>
+            <p>For this project, I was responsible for making a winter environment with realistic snow VFX and shaders. </p>
+            
+            <h2>Snow effects</h2>
+            <p>The main snow effect went through several iterations to achieve the desired look and performance. The final version utilizes viewport-based rendering for optimal performance and visual quality.</p>
+            <p>The snow particles are affected by wind and gravity, creating a natural-looking fall. Any developer can indrease or decrease the intensity of the wind and snow intensity with help of parameters.</p>
+            <p>A secondary mist effect was added to enhance the atmosphere and provide a secondary layer to the overall effect.</p>
+            <p>In order to avoid snow from falling indoors, I implemented a blueprint system to send the bounds of the indoor areas to the VFX system, ensuring that the snow only falls in the intended outdoor areas.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <video src="Images/Project2/SnowPreview.mp4" autoplay loop muted playsinline></video>
+                    <p class="media-caption">Preview of snow falling</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project2/SnowNiagara.png" alt="Snow Niagara System" class="media-image">
+                    <p class="media-caption">Snow Niagara System</p>
+                </div>
+            </div>
+            <p>Snow fall effects were also created for the indoor areas using less influence of wind.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <video src="Images/Project2/SkynightPreview.mp4" autoplay loop muted playsinline></video>
+                    <p class="media-caption">Preview of indoor snow falling</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project2/SkylightNiagara.png" alt="Snow Niagara System" class="media-image">
+                    <p class="media-caption">Indoor snow Niagara System</p>
+                </div>
+            </div>
+            <p>A mist effect was also added for use by the bridge area.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <video src="Images/Project2/SnowPreview.mp4" autoplay loop muted playsinline></video>
+                    <p class="media-caption">Preview of snow falling</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project2/SnowNiagara.png" alt="Snow Niagara System" class="media-image">
+                    <p class="media-caption">Snow Niagara System</p>
+                </div>
+            </div>
 
-            <h3>Technical Approach</h3>
-            <p>Elit sunt cillum minim aliquip fugiat nostrud sit cillum eu duis est ex sunt consequat. Laborum consectetur Lorem qui consequat adipisicing cillum pariatur cupidatat nostrud culpa ipsum anim reprehenderit. Sint ipsum Lorem ex laboris laborum pariatur mollit dolor amet. Fugiat labore laborum non esse. Officia fugiat in excepteur nostrud dolore consequat culpa pariatur dolor esse dolor.</p>
-            <ul>
-                <li>Consectetur sunt labore mollit occaecat officia aliquip labore aute in esse.</li>
-                <li>Cillum exercitation sunt excepteur deserunt cillum.</li>
-                <li>Tempor consequat proident do nostrud exercitation proident nostrud deserunt aliqua elit.</li>
-                <li>Aliquip elit incididunt ipsum magna ullamco exercitation fugiat amet occaecat.</li>
-            </ul>
+            <h2>Snow Shader</h2>
+            <p>Vertex and pixel normals are used to create realistic snow coverage.</p>
+
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/Project2/SnowMaterialPreview.png" alt="Snow Shader" class="media-image">
+                    <p class="media-caption">Preview of snow material</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/Project2/SnowMaterialGraph.png" alt="Snow Material Graph" class="media-image">
+                    <p class="media-caption">Snow Material Graph</p>
+                </div>
+            </div>
 
             <h3>Challenges & Solutions</h3>
             <p>Dolor exercitation nisi consequat occaecat laborum. Qui pariatur velit reprehenderit commodo commodo enim voluptate ea nostrud duis sunt aliquip. Lorem aute exercitation anim consectetur enim esse id nulla in. Consequat ullamco non voluptate consectetur deserunt ea. Non mollit voluptate dolor deserunt pariatur minim mollit aute ullamco veniam ullamco qui incididunt.</p>
@@ -76,7 +120,11 @@
         </footer>
 
     </main>
-
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <div class="lightbox-inner" id="lightboxInner"></div>
+    </div>  
     <script src="script.js"></script>
 </body>
 </html>

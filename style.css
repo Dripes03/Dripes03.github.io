@@ -907,6 +907,8 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     gap: 1.25rem;
     margin: 1.75rem 0;
+    max-width: 60%;
+    
 }
 .media-row--featured {
     max-width: 60%;
@@ -919,6 +921,7 @@ footer {
     border: 1px solid var(--border);
     overflow: hidden;
     cursor: zoom-in;
+    height: min-content;
 }
 .media-item img,
 .media-item video {
@@ -926,6 +929,7 @@ footer {
     height: auto;
     display: block;
     object-fit: cover;
+    max-height: 300px;
 }
 .media-description {
     color: var(--text);
