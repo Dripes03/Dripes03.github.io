@@ -324,7 +324,15 @@ body { background: var(--bg); color: var(--text); font-family: 'Space Grotesk', 
 
 .prev-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--bg);
+}
+
+/* ── GAME PROJECTS ── */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1px;
     background: var(--border);
 }
@@ -710,12 +718,14 @@ footer {
     .portfolio-section, .prev-section, .about-section { padding: 2rem 1.5rem; }
     .portfolio-layout { grid-template-columns: 1fr; }
     .prev-grid { grid-template-columns: 1fr 1fr; }
+    .game-grid { grid-template-columns: 1fr 1fr; }
     .about-section { grid-template-columns: 1fr; gap: 2.5rem; }
     footer { padding: 1.5rem; flex-direction: column; gap: 0.75rem; }
 }
 
 @media (max-width: 540px) {
     .prev-grid { grid-template-columns: 1fr; }
+    .game-grid { grid-template-columns: 1fr; }
 }
 
 /* ─────────────────────────────────────────
@@ -911,7 +921,11 @@ footer {
     
 }
 .media-row--featured {
-    max-width: 60%;
+    max-width: 75%;
+}
+.media-row--featured .media-item video {
+    max-height: none;
+    object-fit: contain;
 }
 .media-item {
     display: flex;
@@ -929,7 +943,24 @@ footer {
     height: auto;
     display: block;
     object-fit: cover;
-    max-height: 300px;
+    max-height: 400px;
+}
+.media-item-fullsize
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    cursor: zoom-in;
+    height: min-content;
+}
+.media-item-fullsize video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 .media-description {
     color: var(--text);
@@ -1018,8 +1049,9 @@ footer {
     .project-meta { grid-template-columns: 1fr 1fr; }
     .project-title { font-size: 2rem; }
     .project-body { padding: 2rem 1.5rem; max-width: 100%; }
-    .media-row { grid-template-columns: 1fr; }
+    .media-row { grid-template-columns: 1fr; max-width: 90%; }
     .media-row--featured { max-width: 100%; }
+    .media-item img,.media-item video {max-height: 200px;}
 }
 @media (max-width: 540px) {
     .project-meta { grid-template-columns: 1fr; }

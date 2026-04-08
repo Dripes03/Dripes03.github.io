@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3D11 Deferred Renderer - Erik Svensson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script src="sidebar.js"></script>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <div class="project-back">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+
+        <div class="project-header">
+            <p class="project-eyebrow">C++/HLSL Programming</p>
+            <h1 class="project-title">D3D11 Deferred Renderer</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Technical Artist / Programmer</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Software</span>
+                    <span class="meta-value">C++, HLSL, Direct3D 11</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Collaborators</span>
+                    <span class="meta-value">None</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">Programming</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-body">
+
+            <div class="media-row media-row--featured">
+                <div class="media-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="Images/Renderer/RealTimeRenderer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="media-caption">Breakdown and Feature showcase</p>
+                </div>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>During my time at BTH, I had a course on advanced graphics programming, where I developed a D3D11 deferred renderer from scratch.
+                <br>The renderer features the following features:
+                <ul>
+                    <li>Deferred shading pipeline with G-buffer and lighting passes</li>
+                    <li>Support for multiple light types including directional, point and spot lights</li>
+                    <li>Shadow mapping for directional and spot lights</li>
+                    <li>Tessellation support for high-detail geometry</li>
+                    <li>Compute shader integration for particles</li>
+                    <li>Quad-tree based frustum culling</li>
+                    <li>Dynamic cubemap reflection</li>
+                    <li>In-house obj and mtl parser/loader</li>
+                </ul>
+            </p>
+
+            <h2>Key Learnings</h2>
+            <p>This project taught me the fundamentals of creating a directX 11 engine and the rendering pipeline. 
+                The experience was invaluable in understanding the complexities of modern graphics rendering and the importance of efficient resource management.
+            </p>
+        </div>
+
+        <footer>
+            <span class="footer-copy">© 2026 Erik Svensson — Technical Artist</span>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/erik-svensson-b12412166" target="_blank">LinkedIn</a>
+                <a href="mailto:eriksvensson.contact@gmail.com">Email</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <div class="lightbox-inner" id="lightboxInner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

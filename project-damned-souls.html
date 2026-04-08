@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damned Souls — Erik Svensson</title>
+    <title>Damned Soul - Erik Svensson</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,23 +18,25 @@
             <a href="index.html" class="back-link">← Back to Portfolio</a>
         </div>
 
-        <div class="project-hero" style="background-image: url('https://picsum.photos/seed/shader3/1600/900?grayscale')"></div>
+        <div class="project-hero" style="background-image: url('Images/DamnedSoul/DamnedHero.png')"></div>
 
         <div class="project-header">
-            <p class="project-eyebrow">Large Game Project — BTH</p>
-            <h1 class="project-title">Damned Souls</h1>
+            <p class="project-eyebrow">Large Game Project - BTH</p>
+            <h1 class="project-title">Damned Soul</h1>
             <div class="project-meta">
                 <div class="meta-item">
                     <span class="meta-label">Role</span>
                     <span class="meta-value">Technical Artist</span>
                 </div>
                 <div class="meta-item">
-                    <span class="meta-label">Tools</span>
-                    <span class="meta-value">—</span>
+                    <span class="meta-label">Software</span>
+                    <span class="meta-value">Custom DX11 Engine</span>
+                    <span class="meta-value">Blender</span>
+                    <span class="meta-value">Maya</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Team Size</span>
-                    <span class="meta-value">—</span>
+                    <span class="meta-value">16</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Category</span>
@@ -44,18 +46,101 @@
         </div>
 
         <div class="project-body">
+
+            <div class="media-row media-row--featured">
+                <div class="media-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="Images/DamnedSoul/DamnedSoulTrailer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="media-caption">Trailer</p>
+                </div>
+            </div>
+
             <h2>Project Overview</h2>
-            <p>Add your project description here.</p>
-
+            <p>Damned Soul is a rogue-lite game where the main character fights through hell. As the player progresses, they descend lower into the depths of the underworld encountering various enemies.</p>
+            <p>This project was my first experience working on a large-scale game project. The team consisted of 16 members consisting of 5 Technical Artists, 5 Civil Engineers and 6 Programmers</p>
+            <p>Due to the lack of a team of graphical artists, animators and level designers, us Technical Artists had to take on those additional responsibilities.
+                <br>My responsibilities included creating concept art, 3D assets, textures and animations for the game. My main focus was on the creation of the skeleton character from concept to final implementation in the engine, but I also contributed to the creation of other characters and assets in the game.</p>
+            </p>
+            <p>This project had a hard budget cap of only 512MB of GPU memory and 2GB of storage space.</p>
+            
             <h2>My Contributions</h2>
-            <p>Add your contributions here.</p>
-
+            <h2>Skeleton Character</h2>
+            <h3>Concept Art</h3>
+            <p>Concept art was created early in the development process to visualize the skeleton enemy and the games overall design.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/SkeletonConcept.png" alt="Skeleton Concept">
+                    <p class="media-caption">Concept of the skeleton enemy</p>
+                </div>
+            </div>
+            <h3>Sculpting</h3>
+            <p>Blender was used to create the initial high-polygon model of the skeleton enemy.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/SkeletonSculpt.png" alt="Skeleton Sculpt">
+                    <p class="media-caption">Sculpt of the skeleton enemy</p>
+                </div>
+            </div>
+            <h3>Retopology</h3>
+            <p>After the high-polygon model was created, retopology was performed to create a low-polygon version suitable for real-time rendering. The total polygon count was reduced from 5 million down to 10 thousand.</p>
+            <p>The retopology process also took into account the needs for proper deformation and weight painting.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/SkeletonRetopo.png" alt="Skeleton Retopology">
+                    <p class="media-caption">Retopology of the skeleton enemy</p>
+                </div>
+            </div>
+            <h3>Texturing</h3>
+            <p>Textures for albedo, normal and emission were created using blender.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/SkeletonTexture.png" alt="Skeleton Textures">
+                    <p class="media-caption">Texturing of the skeleton enemy</p>
+                </div>
+            </div>
+            <h3>Rigging</h3>
+            <p>After the model was complete, rigging was performed to allow for animation control.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/SkeletonRig.png" alt="Skeleton Rigging">
+                    <p class="media-caption">Rigging of the skeleton enemy</p>
+                </div>
+            </div>
+            <h3>Animations</h3>
+            <p>Animations were created for the skeleton enemy to bring it to life in the game.</p>
+            <div class="media-row">
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/idle.gif" alt="Idle animation of the skeleton enemy">
+                    <p class="media-caption">Idle animation of the skeleton enemy</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/walk.gif" alt="Walk animation of the skeleton enemy">
+                    <p class="media-caption">Walk animation of the skeleton enemy</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/attack.gif" alt="Attack animation of the skeleton enemy">
+                    <p class="media-caption">Attack animation of the skeleton enemy</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/takeDamage.gif" alt="Take Damage animation of the skeleton enemy">
+                    <p class="media-caption">Take Damage animation of the skeleton enemy</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/DamnedSoul/death.gif" alt="Death animation of the skeleton enemy">
+                    <p class="media-caption">Death animation of the skeleton enemy</p>
+                </div>
+            </div>
             <h2>Key Learnings</h2>
-            <p>Add key learnings here.</p>
+            <p>With this being my first larger project, I learned about the planning and execution of a complex 3D modeling pipeline. 
+                I also learned the fundementals of working with other developers to achieve a common goal while maintaining good communication and collaboration. 
+                This project also taught me about how to maintain a budget of memory through the use of techniques such as retopology and texture optimization.</p>
+            </p>
         </div>
 
         <footer>
-            <span class="footer-copy">© 2026 Erik Svensson — Technical Artist</span>
+            <span class="footer-copy">© 2026 Erik Svensson - Technical Artist</span>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/erik-svensson-b12412166" target="_blank">LinkedIn</a>
                 <a href="mailto:eriksvensson.contact@gmail.com">Email</a>

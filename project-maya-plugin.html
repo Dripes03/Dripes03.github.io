@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya Plugin - Erik Svensson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script src="sidebar.js"></script>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <div class="project-back">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+
+        <div class="project-header">
+            <p class="project-eyebrow">C++ Maya API</p>
+            <h1 class="project-title">Maya Plugin</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Technical Artist / Programmer</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Software</span>
+                    <span class="meta-value">C++, Maya API</span>
+                </div>
+                     <div class="meta-item">
+                    <span class="meta-label">Collaborators</span>
+                    <span class="meta-value">None</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Category</span>
+                    <span class="meta-value">Pipeline Tool</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-body">
+
+               <div class="media-row media-row--featured">
+                <div class="media-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="Images/MayaPlugin/MayaPlugin.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="media-caption">Plugin showcase</p>
+                </div>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>During my time at BTH, I developed a Maya plugin that uses the Maya API's callback system and circular buffers to send data between Maya and an external 3D renderer.</p>
+            <p>The plugin recieves camera and vertex data from Maya and sends it to the external renderer for real-time rendering using shared memory and inter-process communication.</p>
+            <p> Once the plugin recieves the data via the memory listener, it creates the object in the renderer and the camera data is used to create a one to one representation of the maya viewport </p>
+            <p>The plugin also supports real-time updates, texture updates and dynamic object manipulation within the external renderer.</p>
+
+            <h2>Key Learnings</h2>
+            <p>This project taught me how to integrate with third-party APIs and manage complex data flows between different software applications using shared memory and inter-process communication.</p>
+        </div>
+
+        <footer>
+            <span class="footer-copy">© 2026 Erik Svensson — Technical Artist</span>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/erik-svensson-b12412166" target="_blank">LinkedIn</a>
+                <a href="mailto:eriksvensson.contact@gmail.com">Email</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <div class="lightbox-inner" id="lightboxInner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -26,7 +26,7 @@
     <p class="drawer-desc">Shaders, VFX, real-time rendering, and pipeline tools for games and interactive media.</p>
     <ul class="drawer-nav">
         <li><a href="index.html#portfolio"><span class="sidebar-nav-num">01</span> Portfolio</a></li>
-        <li><a href="index.html#previousgames"><span class="sidebar-nav-num">02</span> Previous Games</a></li>
+        <li><a href="index.html#gameprojects"><span class="sidebar-nav-num">02</span> Previous Games</a></li>
         <li><a href="index.html#previous"><span class="sidebar-nav-num">03</span> Previous Work</a></li>
         <li><a href="index.html#about"><span class="sidebar-nav-num">04</span> About</a></li>
     </ul>
@@ -51,7 +51,7 @@
     <nav>
         <ul class="sidebar-nav">
             <li><a href="index.html#portfolio"><span class="sidebar-nav-num">01</span> Portfolio</a></li>
-            <li><a href="index.html#previousgames"><span class="sidebar-nav-num">02</span> Previous Games</a></li>
+            <li><a href="index.html#gameprojects"><span class="sidebar-nav-num">02</span> Previous Games</a></li>
             <li><a href="index.html#previous"><span class="sidebar-nav-num">03</span> Previous Work</a></li>
             <li><a href="index.html#about"><span class="sidebar-nav-num">04</span> About</a></li>
         </ul>
